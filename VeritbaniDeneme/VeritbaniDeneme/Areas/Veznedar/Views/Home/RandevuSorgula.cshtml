@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "RandevuSorgula";
+}
+
+<div class="col-lg-10 container">
+    <div class="p-5">
+        <div class="text-center">
+            <h1 class="h4 text-gray-900 mb-4">Randevu Sorgula</h1>
+        </div>
+        <form class="user" asp-action="RandevuSorgula" method="post">
+            <div class="form-group">
+                <input type="text" value="" class="form-control form-control-user" name="tcNo"
+                       placeholder="Hasta TC Numarası">
+            </div>
+            <button type="submit" class="btn btn-primary btn-user btn-block">
+                Sorgula
+            </button>
+            <hr>
+        </form>
+        @{
+            if (ViewBag.GecersizTc != null)
+            {
+                <span>Geçerisz tc</span>
+            }
+        }
+        <hr>
+    </div>
+</div>
