@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ramazan\\source\\repos\\BenimDenemem2\\VeritbaniDeneme\\VeritbaniDeneme\\VeritbaniDeneme.csproj": {}
+    "C:\\Users\\ramazan\\source\\repos\\BenimDenemem2\\VeritbaniDeneme\\DEnemeProje\\DEnemeProje.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ramazan\\source\\repos\\BenimDenemem2\\VeritbaniDeneme\\VeritbaniDeneme\\VeritbaniDeneme.csproj": {
+    "C:\\Users\\ramazan\\source\\repos\\BenimDenemem2\\VeritbaniDeneme\\DEnemeProje\\DEnemeProje.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramazan\\source\\repos\\BenimDenemem2\\VeritbaniDeneme\\VeritbaniDeneme\\VeritbaniDeneme.csproj",
-        "projectName": "VeritbaniDeneme",
-        "projectPath": "C:\\Users\\ramazan\\source\\repos\\BenimDenemem2\\VeritbaniDeneme\\VeritbaniDeneme\\VeritbaniDeneme.csproj",
+        "projectUniqueName": "C:\\Users\\ramazan\\source\\repos\\BenimDenemem2\\VeritbaniDeneme\\DEnemeProje\\DEnemeProje.csproj",
+        "projectName": "DEnemeProje",
+        "projectPath": "C:\\Users\\ramazan\\source\\repos\\BenimDenemem2\\VeritbaniDeneme\\DEnemeProje\\DEnemeProje.csproj",
         "packagesPath": "C:\\Users\\ramazan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramazan\\source\\repos\\BenimDenemem2\\VeritbaniDeneme\\VeritbaniDeneme\\obj\\",
+        "outputPath": "C:\\Users\\ramazan\\source\\repos\\BenimDenemem2\\VeritbaniDeneme\\DEnemeProje\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,32 +43,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.4, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[3.1.5, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

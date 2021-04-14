@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G7G9W1IBA7RDrzv3f/92uL1p7HDnJwD+S/lgVbxx5Ll1AWsUCjAk52DDwdfqU0JyiIy/tP9dITaoqzLoprqHOQ==",
+  "dgSpecHash": "J6krq8si5RkA0hgoSQ0VqS328Ngc2CyBkSzIMCdYMOEbRbPa7ol5cEymrfR2IUW13VA+BUox6ZV1W0Qkw2sdIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ramazan\\Desktop\\DatabaseHomework\\VeritbaniDeneme\\VeritbaniDeneme\\VeritbaniDeneme.csproj",
+  "projectFilePath": "C:\\Users\\ramazan\\source\\repos\\BenimDenemem2\\VeritbaniDeneme\\VeritbaniDeneme\\VeritbaniDeneme.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ramazan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ramazan\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
