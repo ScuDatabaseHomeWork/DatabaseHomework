@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "HastaGiris";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model HastaGirisiDto
+
+
+    <div class="col-lg-6">
+        <div class="p-5">
+            <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-4">Hasta Girişi</h1>
+            </div>
+            <form class="user" asp-action="HastaGiris" method="post">
+                <div class="form-group">
+                    <input type="text" value="" class="form-control form-control-user" asp-for="Tcno" 
+                           placeholder="TC No">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control form-control-user" asp-for="Parola"
+                            placeholder="Parola">
+                </div>
+                <button type="submit" class="btn btn-primary btn-user btn-block">
+                    Giriş Yap
+                </button>
+                <hr>
+            </form>
+            <hr>
+        </div>
+    </div>
