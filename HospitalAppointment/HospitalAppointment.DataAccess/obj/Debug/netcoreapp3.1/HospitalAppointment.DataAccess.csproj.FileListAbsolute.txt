@@ -1,0 +1,12 @@
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.DataAccess\bin\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.deps.json
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.DataAccess\bin\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.runtimeconfig.json
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.DataAccess\bin\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.runtimeconfig.dev.json
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.DataAccess\bin\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.dll
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.DataAccess\bin\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.pdb
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.DataAccess\obj\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.csprojAssemblyReference.cache
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.DataAccess\obj\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.DataAccess\obj\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.AssemblyInfo.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.DataAccess\obj\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.DataAccess\obj\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.dll
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.DataAccess\obj\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.pdb
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.DataAccess\obj\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.genruntimeconfig.cache
