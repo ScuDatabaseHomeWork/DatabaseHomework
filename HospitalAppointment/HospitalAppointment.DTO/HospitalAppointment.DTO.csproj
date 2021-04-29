@@ -12,7 +12,6 @@
     <Folder Include="DTOs\Policlinic\" />
     <Folder Include="DTOs\Prescribe\" />
     <Folder Include="DTOs\Rol\" />
-    <Folder Include="DTOs\User\" />
     <Folder Include="DTOs\SuperAdmin\" />
     <Folder Include="DTOs\BlackList\" />
     <Folder Include="DTOs\Appointment\" />

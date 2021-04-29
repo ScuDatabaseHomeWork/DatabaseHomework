@@ -36,6 +36,7 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities
         [Column(TypeName = "smalldatetime")]
         public DateTime BirthDate { get; set; }
         public long Telephone { get; set; }
+        public bool Gender { get; set; }
         [Required]
         [StringLength(50)]
         public string Password { get; set; }

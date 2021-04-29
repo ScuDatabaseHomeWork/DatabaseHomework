@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Areas\" />
-    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HospitalAppointment.Business\HospitalAppointment.Business.csproj" />
+    <ProjectReference Include="..\HospitalAppointment.DTO\HospitalAppointment.DTO.csproj" />
   </ItemGroup>
 
 </Project>

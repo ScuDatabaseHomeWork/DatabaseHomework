@@ -145,3 +145,12 @@ C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppoi
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.dll
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.Business.pdb
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.pdb
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\PatientSignIn.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\PersonelSignIn.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.DTO.dll
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.DTO.pdb

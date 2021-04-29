@@ -7,5 +7,7 @@ namespace HospitalAppointment.DataAccess.Interfaces
 {
     public interface IUserDal : IGenericDal<User>
     {
+        bool CheckUserforLogin(long tcNo, string password);
+        User GetUserByTcNo(long tcNo);
     }
 }

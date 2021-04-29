@@ -7,5 +7,7 @@ namespace HospitalAppointment.Business.Interfaces
 {
     public interface IUserService:IGenericService<User>
     {
+        bool CheckUserforLogin(long tcNo, string password);
+        User GetUserByTcNo(long tcNo);
     }
 }
