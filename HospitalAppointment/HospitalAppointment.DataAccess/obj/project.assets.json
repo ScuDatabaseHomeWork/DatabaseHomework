@@ -5799,19 +5799,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ESMA\\.nuget\\packages\\": {}
+    "C:\\Users\\Karani Karaman\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ESMA\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj",
       "projectName": "HospitalAppointment.DataAccess",
-      "projectPath": "C:\\Users\\ESMA\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\ESMA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ESMA\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Karani Karaman\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ESMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Karani Karaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
