@@ -9,8 +9,15 @@ namespace HospitalAppointment.Business.Concrete
 {
     public class SuperAdminManager:GenericManager<SuperAdmin>,ISuperAdminService
     {
-        public SuperAdminManager(IGenericDal<SuperAdmin> genericDal) : base(genericDal)
+        private readonly ISuperAdminDal _superAdminDal;
+        public SuperAdminManager(IGenericDal<SuperAdmin> genericDal,ISuperAdminDal superAdminDal) : base(genericDal)
         {
+            _superAdminDal = superAdminDal;
+        }
+
+        public SuperAdmin GetSuperAdminByUserId(int id)
+        {
+            return _superAdminDal.GetSuperAdminByUserId(id);
         }
     }
 }

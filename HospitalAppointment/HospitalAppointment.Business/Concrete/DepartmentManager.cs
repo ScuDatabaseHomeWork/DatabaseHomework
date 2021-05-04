@@ -9,9 +9,15 @@ namespace HospitalAppointment.Business.Concrete
 {
     public class DepartmentManager:GenericManager<Department>,IDepartmentService
     {
-        public DepartmentManager(IGenericDal<Department> genericDal) : base(genericDal)
+        private readonly IDepartmentDal _departmentDal;
+        public DepartmentManager(IGenericDal<Department> genericDal,IDepartmentDal departmentDal) : base(genericDal)
         {
-          
+            _departmentDal = departmentDal;
+        }
+
+        public List<Department> GetWithDepartments()
+        {
+          return  _departmentDal.GetWithDepartments();
         }
     }
 }

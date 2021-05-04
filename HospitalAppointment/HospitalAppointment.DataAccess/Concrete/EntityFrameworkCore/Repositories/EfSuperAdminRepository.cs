@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Context;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities;
@@ -9,8 +10,15 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
 {
     public class EfSuperAdminRepository:EfGenericRepository<SuperAdmin>,ISuperAdminDal
     {
+        private readonly HospitalAppBbContext _context;
         public EfSuperAdminRepository(HospitalAppBbContext context) : base(context)
         {
+            _context = context;
+        }
+
+        public SuperAdmin GetSuperAdminByUserId(int id)
+        {
+            return _context.SuperAdmins.FirstOrDefault(I => I.UserId == id);
         }
     }
 }

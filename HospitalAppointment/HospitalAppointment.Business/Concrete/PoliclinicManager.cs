@@ -9,8 +9,15 @@ namespace HospitalAppointment.Business.Concrete
 {
     public class PoliclinicManager:GenericManager<Policlinic>,IPoliclinicService
     {
-        public PoliclinicManager(IGenericDal<Policlinic> genericDal) : base(genericDal)
+        private readonly IPoliclinicDal _policlinicDal;
+        public PoliclinicManager(IGenericDal<Policlinic> genericDal,IPoliclinicDal policlinicDal) : base(genericDal)
         {
+            _policlinicDal = policlinicDal;
+        }
+
+        public List<Policlinic> GetDepartmentPoliclinicsByDepartmentId(int id)
+        {
+            return _policlinicDal.GetDepartmentPoliclinicsByDepartmentId(id);
         }
     }
 }

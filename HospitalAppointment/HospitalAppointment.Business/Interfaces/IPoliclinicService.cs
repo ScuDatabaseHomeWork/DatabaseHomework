@@ -7,5 +7,6 @@ namespace HospitalAppointment.Business.Interfaces
 {
     public interface IPoliclinicService:IGenericService<Policlinic>
     {
+        List<Policlinic> GetDepartmentPoliclinicsByDepartmentId(int id);
     }
 }

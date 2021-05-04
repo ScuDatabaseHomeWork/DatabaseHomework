@@ -6,6 +6,7 @@ namespace HospitalAppointment.Business.Interfaces
 {
     public interface IGenericService<TEntity> where TEntity : new()
     {
+        TEntity AddWithRetObject(TEntity entity);
         void Add(TEntity entity);
         void Remove(TEntity entity);
         void Update(TEntity entity);

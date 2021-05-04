@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Context;
 using HospitalAppointment.DataAccess.Interfaces;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositories
 {
@@ -14,6 +15,14 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
         {
             _context = context;
         }
+
+        public TEntity AddWithRetObject(TEntity entity)
+        {
+            var addEntity = _context.Set<TEntity>().Add(entity);
+            _context.SaveChanges();
+            return addEntity.Entity;
+        }
+
         public void Add(TEntity entity)
         {
             _context.Set<TEntity>().Add(entity);

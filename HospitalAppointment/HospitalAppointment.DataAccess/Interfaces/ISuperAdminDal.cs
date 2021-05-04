@@ -7,6 +7,7 @@ namespace HospitalAppointment.DataAccess.Interfaces
 {
     public interface ISuperAdminDal:IGenericDal<SuperAdmin>
     {
+        SuperAdmin GetSuperAdminByUserId(int id);
 
     }
 }

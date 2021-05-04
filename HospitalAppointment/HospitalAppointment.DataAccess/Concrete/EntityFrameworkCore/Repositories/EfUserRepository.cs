@@ -5,10 +5,11 @@ using System.Text;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Context;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities;
 using HospitalAppointment.DataAccess.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositories
 {
-    public class EfUserRepository:EfGenericRepository<User>,IUserDal
+    public class EfUserRepository : EfGenericRepository<User>, IUserDal
     {
         private readonly HospitalAppBbContext _context;
         public EfUserRepository(HospitalAppBbContext context) : base(context)
@@ -16,7 +17,7 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             _context = context;
         }
 
-        public bool CheckUserforLogin(long tcNo,string password)
+        public bool CheckUserforLogin(long tcNo, string password)
         {
             var user = _context.Users.FirstOrDefault(I => I.Tcno == tcNo);
             if (user != null)
@@ -33,5 +34,13 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
         {
             return _context.Users.FirstOrDefault(I => I.Tcno == tcNo);
         }
+
+        public string GetUserRoleByTcNo(long tcNo)
+        {
+            var user = GetUserByTcNo(tcNo);
+            return _context.Rols.FirstOrDefault(I => I.Id == user.RolId)?.RolName;
+        }
+
+        
     }
 }

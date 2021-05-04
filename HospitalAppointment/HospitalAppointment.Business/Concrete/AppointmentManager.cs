@@ -9,8 +9,16 @@ namespace HospitalAppointment.Business.Concrete
 {
     public class AppointmentManager:GenericManager<Appointment>,IAppointmentService
     {
-        public AppointmentManager(IGenericDal<Appointment> genericDal) : base(genericDal)
+        private readonly IAppointmentDal _appointmentDal;
+        public AppointmentManager(IGenericDal<Appointment> genericDal,IAppointmentDal appointmentDal) : base(genericDal)
         {
+            _appointmentDal = appointmentDal;
+        }
+
+
+        public List<DateTime> GetAppointmentsHourTimesByAppointmentDayAndDoctorId(DateTime day, int doctorId)
+        {
+            return _appointmentDal.GetAppointmentsHourTimesByAppointmentDayAndDoctorId(day, doctorId);
         }
     }
 }

@@ -9,8 +9,20 @@ namespace HospitalAppointment.Business.Concrete
 {
     public class PatientManager:GenericManager<Patient>,IPatientService
     {
-        public PatientManager(IGenericDal<Patient> genericDal) : base(genericDal)
+        private readonly IPatientDal _patientDal;
+        public PatientManager(IGenericDal<Patient> genericDal,IPatientDal patientDal) : base(genericDal)
         {
+            _patientDal = patientDal;
+        }
+
+        public List<Patient> GetPatientsWithAllTables()
+        {
+            return _patientDal.GetPatientsWithAllTables();
+        }
+
+        public User CheckAndGetPatientByTcNo(long tc)
+        {
+            return _patientDal.CheckAndGetPatientByTcNo(tc);
         }
     }
 }

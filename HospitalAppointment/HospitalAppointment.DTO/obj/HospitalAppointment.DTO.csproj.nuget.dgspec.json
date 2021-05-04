@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DTO\\HospitalAppointment.DTO.csproj": {}
+    "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DTO\\HospitalAppointment.DTO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DTO\\HospitalAppointment.DTO.csproj": {
+    "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DTO\\HospitalAppointment.DTO.csproj",
-        "projectName": "HospitalAppointment.DTO",
-        "projectPath": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DTO\\HospitalAppointment.DTO.csproj",
-        "packagesPath": "C:\\Users\\Karani Karaman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DTO\\obj\\",
+        "projectUniqueName": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj",
+        "projectName": "HospitalAppointment.DataAccess",
+        "projectPath": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\ramazan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Karani Karaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ramazan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,6 +32,90 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DTO\\HospitalAppointment.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DTO\\HospitalAppointment.DTO.csproj",
+        "projectName": "HospitalAppointment.DTO",
+        "projectPath": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DTO\\HospitalAppointment.DTO.csproj",
+        "packagesPath": "C:\\Users\\ramazan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ramazan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -58,7 +142,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

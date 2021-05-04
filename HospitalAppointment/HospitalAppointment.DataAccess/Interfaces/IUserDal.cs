@@ -9,5 +9,7 @@ namespace HospitalAppointment.DataAccess.Interfaces
     {
         bool CheckUserforLogin(long tcNo, string password);
         User GetUserByTcNo(long tcNo);
+        string GetUserRoleByTcNo(long tcNo);
+
     }
 }

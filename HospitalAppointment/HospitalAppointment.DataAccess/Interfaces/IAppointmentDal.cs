@@ -7,6 +7,6 @@ namespace HospitalAppointment.DataAccess.Interfaces
 {
     public interface IAppointmentDal:IGenericDal<Appointment>
     {
-
+        List<DateTime> GetAppointmentsHourTimesByAppointmentDayAndDoctorId(DateTime day, int doctorId);
     }
 }

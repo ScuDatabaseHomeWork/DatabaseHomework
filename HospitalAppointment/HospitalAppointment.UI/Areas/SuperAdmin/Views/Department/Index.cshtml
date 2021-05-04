@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model List<HospitalAppointment.DTO.DTOs.Department.DepartmentListDto>
+
+<div class="card">
+    <div class="card-header">
+        <h5>Hastane Departmanları Ve Poliklinikleri</h5>
+        <div class="card-header-right">
+            <a class="btn btn-secondary" asp-action="CreateDepartment">Yeni Departman</a>
+        </div>
+    </div>
+    <div class="card-block table-border-style">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Departman İsmi</th>
+                        <th>Poliklinikleri</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.DepartmanName</td>
+                            <th>
+                                <ul>
+                                    @if (@item.Policlinics.Count != 0)
+                                    {
+                                        @foreach (var policlinic in item.Policlinics)
+                                        {
+                                            <li>@policlinic.PoliclinicName</li>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <li>Poliklinik Yok</li>
+                                    }
+                                </ul>
+                            </th>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

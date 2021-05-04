@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.Business\\HospitalAppointment.Business.csproj": {}
+    "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.Business\\HospitalAppointment.Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.Business\\HospitalAppointment.Business.csproj": {
+    "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.Business\\HospitalAppointment.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.Business\\HospitalAppointment.Business.csproj",
+        "projectUniqueName": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.Business\\HospitalAppointment.Business.csproj",
         "projectName": "HospitalAppointment.Business",
-        "projectPath": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.Business\\HospitalAppointment.Business.csproj",
-        "packagesPath": "C:\\Users\\Karani Karaman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.Business\\obj\\",
+        "projectPath": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.Business\\HospitalAppointment.Business.csproj",
+        "packagesPath": "C:\\Users\\ramazan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Karani Karaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ramazan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj"
+              "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj"
               }
             }
           }
@@ -62,24 +62,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj": {
+    "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj",
         "projectName": "HospitalAppointment.DataAccess",
-        "projectPath": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Karani Karaman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karani Karaman\\Desktop\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\HospitalAppointment.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\ramazan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ramazan\\source\\repos\\ScuDatabaseHomeWork\\DatabaseHomework\\HospitalAppointment\\HospitalAppointment.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Karani Karaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ramazan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -142,7 +142,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

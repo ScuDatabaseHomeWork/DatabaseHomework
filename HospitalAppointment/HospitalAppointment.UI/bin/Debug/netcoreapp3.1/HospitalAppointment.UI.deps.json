@@ -2220,6 +2220,9 @@
         }
       },
       "HospitalAppointment.DTO/1.0.0": {
+        "dependencies": {
+          "HospitalAppointment.DataAccess": "1.0.0"
+        },
         "runtime": {
           "HospitalAppointment.DTO.dll": {}
         },

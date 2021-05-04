@@ -9,8 +9,25 @@ namespace HospitalAppointment.Business.Concrete
 {
     public class DoctorManager:GenericManager<Doctor>,IDoctorService
     {
-        public DoctorManager(IGenericDal<Doctor> genericDal) : base(genericDal)
+        private readonly IDoctorDal _doctorDal;
+        public DoctorManager(IGenericDal<Doctor> genericDal,IDoctorDal doctorDal) : base(genericDal)
         {
+            _doctorDal = doctorDal;
+        }
+
+        public List<Doctor> GetDoctorsWithAllTables()
+        {
+            return _doctorDal.GetDoctorsWithAllTables();
+        }
+
+        public List<User> GetDepartmentDoctorsByDepartmentId(int id)
+        {
+            return _doctorDal.GetDepartmentDoctorsByDepartmentId(id);
+        }
+
+        public Doctor GetDoctorByUserId(int id)
+        {
+            return _doctorDal.GetDoctorByUserId(id);
         }
     }
 }

@@ -24,5 +24,10 @@ namespace HospitalAppointment.Business.Concrete
         {
             return _userDal.GetUserByTcNo(tcNo);
         }
+
+        public string GetUserRoleByTcNo(long tcNo)
+        {
+            return _userDal.GetUserRoleByTcNo(tcNo);
+        }
     }
 }

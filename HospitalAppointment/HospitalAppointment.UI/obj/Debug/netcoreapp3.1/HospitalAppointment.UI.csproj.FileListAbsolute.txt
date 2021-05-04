@@ -150,164 +150,32 @@ C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppoi
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
-C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\PatientSignIn.cshtml.g.cs
-C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\PersonelSignIn.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.DTO.dll
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.DTO.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\appsettings.Development.json
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.UI.exe
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.UI.deps.json
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.UI.runtimeconfig.json
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.UI.runtimeconfig.dev.json
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.UI.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.UI.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.UI.Views.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.UI.Views.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\AutoMapper.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.Business.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.DTO.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.Business.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.DTO.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.csprojAssemblyReference.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.AssemblyInfoInputs.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.AssemblyInfo.cs
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.csproj.CoreCompileInputs.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.RazorAssemblyInfo.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.RazorAssemblyInfo.cs
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\staticwebassets\HospitalAppointment.UI.StaticWebAssets.Manifest.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\staticwebassets\HospitalAppointment.UI.StaticWebAssets.xml
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\scopedcss\bundle\HospitalAppointment.UI.styles.css
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.TagHelpers.input.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.TagHelpers.output.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.RazorCoreGenerate.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\PatientLogIn.cshtml.g.cs
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\PersonelLogIn.cshtml.g.cs
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\UserLogIn.cshtml.g.cs
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.RazorTargetAssemblyInfo.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.RazorTargetAssemblyInfo.cs
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.Views.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.csproj.CopyComplete
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\HospitalAppointment.UI.genruntimeconfig.cache
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\PatientLogIn.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\PersonelLogIn.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\UserLogIn.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\_ViewImports.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\_ViewStart.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Home\Index.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\PreLoaderComponent\Default.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Department\CreateDepartment.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Department\Index.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Doctor\Index.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Doctor\CreateDoctor.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Patient\Index.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Patient\CreatePatient.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\PatientRegistrar\Index.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\PatientRegistrar\CreatePatientRegistrar.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Home\MyProfil.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\_ViewImports.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\_ViewStart.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Home\Index.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Patient\CreatePatient.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Appointment\SelectingPatient.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Appointment\SelectingDepartment.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Appointment\SelectingDoctor.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Appointment\SelectingDateDay.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Appointment\SelectingDateHourTime.cshtml.g.cs

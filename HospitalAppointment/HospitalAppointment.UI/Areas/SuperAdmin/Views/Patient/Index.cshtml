@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model List<HospitalAppointment.DTO.DTOs.Patient.PatientListDto>
+<div class="card">
+    <div class="card-header">
+        <h5>Hasta Ekleme Sayfası</h5>
+        <div class="card-header-right">
+            <a class="btn btn-secondary" asp-action="CreatePatient">Yeni Hasta</a>
+        </div>
+    </div>
+    <div class="card-block table-border-style">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Hasta Adı Soyadı</th>
+                        <th>Telefonu</th>
+                        <th>Ana Adı</th>
+                        <th>Baba Adı</th>
+                        <th>EMail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.User.Name @item.User.SurName</td>
+                            <td>@item.User.Telephone</td>
+                            <td>@item.AnaAdi</td>
+                            <td>@item.BabaAdi</td>
+                            <td>@item.User.Email</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

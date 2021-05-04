@@ -9,8 +9,30 @@ namespace HospitalAppointment.Business.Concrete
 {
     public class RolManager:GenericManager<Rol>,IRolService
     {
-        public RolManager(IGenericDal<Rol> genericDal) : base(genericDal)
+        private readonly IRolDal _rolDal;
+        public RolManager(IGenericDal<Rol> genericDal,IRolDal rolDal) : base(genericDal)
         {
+            _rolDal = rolDal;
+        }
+
+        public Rol GetDoctorRol()
+        {
+          return  _rolDal.GetDoctorRol();
+        }
+
+        public Rol GetSuperAdminRol()
+        {
+            return _rolDal.GetSuperAdminRol();
+        }
+
+        public Rol GetPatientRol()
+        {
+            return _rolDal.GetPatientRol();
+        }
+
+        public Rol GetPatientRegistrarRol()
+        {
+            return _rolDal.GetPatientRegistrarRol();
         }
     }
 }

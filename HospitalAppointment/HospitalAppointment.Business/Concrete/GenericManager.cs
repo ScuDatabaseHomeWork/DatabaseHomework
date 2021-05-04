@@ -6,12 +6,17 @@ using HospitalAppointment.DataAccess.Interfaces;
 
 namespace HospitalAppointment.Business.Concrete
 {
-    public class GenericManager<TEntity>:IGenericService<TEntity> where TEntity :class, new()
+    public class GenericManager<TEntity> : IGenericService<TEntity> where TEntity : class, new()
     {
         private readonly IGenericDal<TEntity> _genericDal;
         public GenericManager(IGenericDal<TEntity> genericDal)
         {
             _genericDal = genericDal;
+        }
+
+        public TEntity AddWithRetObject(TEntity entity)
+        {
+            return _genericDal.AddWithRetObject(entity);
         }
 
         public void Add(TEntity entity)
@@ -21,7 +26,7 @@ namespace HospitalAppointment.Business.Concrete
 
         public void Remove(TEntity entity)
         {
-           _genericDal.Remove(entity);
+            _genericDal.Remove(entity);
         }
 
         public void Update(TEntity entity)

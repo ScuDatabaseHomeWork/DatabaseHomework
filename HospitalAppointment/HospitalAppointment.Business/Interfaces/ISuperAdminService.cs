@@ -7,5 +7,6 @@ namespace HospitalAppointment.Business.Interfaces
 {
     public interface ISuperAdminService:IGenericService<SuperAdmin>
     {
+        SuperAdmin GetSuperAdminByUserId(int id);
     }
 }

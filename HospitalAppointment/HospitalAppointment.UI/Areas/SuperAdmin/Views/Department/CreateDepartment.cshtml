@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "CreateDepartment";
+}
+@model HospitalAppointment.DTO.DTOs.Department.DepartmentAddDto
+
+<div class="col-md-10 container-fluid">
+    <div class="card">
+        <div class="card-header">
+            <h5>Departman Ekleme Sayfası</h5>
+        </div>
+        <div class="card-block">
+            <form class="form-material" asp-action="CreateDepartment" method="post">
+                <div class="form-group form-default">
+                    <input type="text" class="form-control" required="" asp-for="DepartmanName">
+                    <span class="form-bar"></span>
+                    <label class="float-label">Departman Adı</label>
+                </div>
+                <br/>
+                <button type="submit" class="btn waves-effect waves-light btn-primary"><i class="icofont icofont-check-circled"></i>Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>

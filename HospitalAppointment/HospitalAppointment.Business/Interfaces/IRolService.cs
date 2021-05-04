@@ -7,5 +7,9 @@ namespace HospitalAppointment.Business.Interfaces
 {
     public interface IRolService:IGenericService<Rol>
     {
+        Rol GetDoctorRol();
+        Rol GetSuperAdminRol();
+        Rol GetPatientRol();
+        Rol GetPatientRegistrarRol();
     }
 }

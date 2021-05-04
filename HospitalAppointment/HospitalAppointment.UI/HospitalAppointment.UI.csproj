@@ -5,8 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\PatientRegistrar\Models\" />
+    <Folder Include="Areas\Doctor\Controllers\" />
+    <Folder Include="Areas\Doctor\Models\" />
+    <Folder Include="Areas\Doctor\Views\" />
+    <Folder Include="Areas\Patient\Controllers\" />
+    <Folder Include="Areas\Patient\Models\" />
+    <Folder Include="Areas\Patient\Views\" />
+    <Folder Include="Areas\SuperAdmin\Models\" />
     <Folder Include="Models\" />
-    <Folder Include="Areas\" />
+    <Folder Include="TagHelpers\" />
   </ItemGroup>
 
   <ItemGroup>

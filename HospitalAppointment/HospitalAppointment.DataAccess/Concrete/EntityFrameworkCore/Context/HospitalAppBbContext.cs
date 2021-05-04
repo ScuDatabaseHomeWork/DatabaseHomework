@@ -103,8 +103,6 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Context
 
             modelBuilder.Entity<Patient>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.HasOne(d => d.SuperAdmin)
                     .WithMany(p => p.Patients)
                     .HasForeignKey(d => d.SuperAdminId)
@@ -120,8 +118,6 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Context
 
             modelBuilder.Entity<PatientRegistrar>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.HasOne(d => d.SuperAdmin)
                     .WithMany(p => p.PatientRegistrars)
                     .HasForeignKey(d => d.SuperAdminId)
@@ -137,7 +133,7 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Context
 
             modelBuilder.Entity<Policlinic>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedOnAdd();
+                entity.Property(e => e.Id).ValueGeneratedNever();
 
                 entity.HasOne(d => d.Department)
                     .WithMany(p => p.Policlinics)

@@ -5,16 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\Department\" />
-    <Folder Include="DTOs\Doctor\" />
-    <Folder Include="DTOs\Patient\" />
-    <Folder Include="DTOs\PatientRegistrar\" />
-    <Folder Include="DTOs\Policlinic\" />
-    <Folder Include="DTOs\Prescribe\" />
-    <Folder Include="DTOs\Rol\" />
-    <Folder Include="DTOs\SuperAdmin\" />
-    <Folder Include="DTOs\BlackList\" />
-    <Folder Include="DTOs\Appointment\" />
+    <ProjectReference Include="..\HospitalAppointment.DataAccess\HospitalAppointment.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

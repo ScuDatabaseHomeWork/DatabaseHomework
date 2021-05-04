@@ -10,15 +10,3 @@ C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppoi
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\obj\Debug\netcoreapp3.1\HospitalAppointment.Business.csproj.CopyComplete
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\obj\Debug\netcoreapp3.1\HospitalAppointment.Business.dll
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\obj\Debug\netcoreapp3.1\HospitalAppointment.Business.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\bin\Debug\netcoreapp3.1\HospitalAppointment.Business.deps.json
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\bin\Debug\netcoreapp3.1\HospitalAppointment.Business.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\bin\Debug\netcoreapp3.1\HospitalAppointment.Business.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\bin\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\bin\Debug\netcoreapp3.1\HospitalAppointment.DataAccess.pdb
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\obj\Debug\netcoreapp3.1\HospitalAppointment.Business.csprojAssemblyReference.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\obj\Debug\netcoreapp3.1\HospitalAppointment.Business.AssemblyInfoInputs.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\obj\Debug\netcoreapp3.1\HospitalAppointment.Business.AssemblyInfo.cs
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\obj\Debug\netcoreapp3.1\HospitalAppointment.Business.csproj.CoreCompileInputs.cache
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\obj\Debug\netcoreapp3.1\HospitalAppointment.Business.csproj.CopyComplete
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\obj\Debug\netcoreapp3.1\HospitalAppointment.Business.dll
-C:\Users\Karani Karaman\Desktop\DatabaseHomework\HospitalAppointment\HospitalAppointment.Business\obj\Debug\netcoreapp3.1\HospitalAppointment.Business.pdb

@@ -7,5 +7,7 @@ namespace HospitalAppointment.Business.Interfaces
 {
     public interface IPatientRegistrarService:IGenericService<PatientRegistrar>
     {
+        List<PatientRegistrar> GetPatientRegistrarsWithAllTables();
+        PatientRegistrar GetPatientRegistrarByUserId(int id);
     }
 }
