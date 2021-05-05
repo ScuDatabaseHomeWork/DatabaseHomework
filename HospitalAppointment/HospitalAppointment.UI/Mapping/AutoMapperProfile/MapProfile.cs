@@ -28,6 +28,8 @@ namespace HospitalAppointment.UI.Mapping.AutoMapperProfile
             CreateMap<AppointmentListDto, Appointment>();
             CreateMap<Appointment, AppointmentUpdateDto>();
             CreateMap<AppointmentUpdateDto, Appointment>();
+            CreateMap<Appointment, AppointmentsOfPatientRegistrar>();
+            CreateMap<AppointmentsOfPatientRegistrar, Appointment>();
             #endregion
 
             #region BlackList-BlackListDto

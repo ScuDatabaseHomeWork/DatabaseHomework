@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using HospitalAppointment.Business.Interfaces;
+using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities;
 using HospitalAppointment.DTO.DTOs.Appointment;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
 using Microsoft.AspNetCore.Http;
@@ -116,6 +117,27 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
                 _appointmentService.GetAppointmentsHourTimesByAppointmentDayAndDoctorId(appointmentUserDto.AppointmentDateTime,appointmentUserDto.DoctorId);
             ViewBag.existDateHourTimes = existDateHourTimes;
             return View(appointmentUserDto);
+        }
+
+        public IActionResult FormAppointment(AppointmentUserDto appointmentUserDto)
+        {
+            TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+            return View(appointmentUserDto);
+        }
+
+        [HttpPost]
+        public IActionResult CreateAppointment(AppointmentUserDto appointmentUserDto)
+        {
+           
+            Appointment appointment = new Appointment()
+            {
+                DoctorId = appointmentUserDto.DoctorId,
+                Date = appointmentUserDto.AppointmentDateTime,
+                PatientId = _patientService.GetPatientByUserId(appointmentUserDto.UserId).Id,
+                RegistrarId = _activePatientRegistrar.GetActivePatientRegistrar().PatientRegistrarId
+            };
+            _appointmentService.Add(appointment);
+            return RedirectToAction("Index", "Home");
         }
     }
 }

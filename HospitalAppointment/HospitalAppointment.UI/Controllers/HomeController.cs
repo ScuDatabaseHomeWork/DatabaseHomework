@@ -69,7 +69,10 @@ namespace HospitalAppointment.UI.Controllers
                 }
                 else if (userRole == "Patient")
                 {
-
+                    claims.Add(new Claim(ClaimTypes.Role,"Patient"));
+                    var patient = _patientService.GetPatientByUserId(user.Id);
+                    claims.Add(new Claim("PatientId",patient.Id.ToString()));
+                    return LoginWithClaims(claims, "Patient");
                 }
                 else if (userRole == "Doctor")
                 {

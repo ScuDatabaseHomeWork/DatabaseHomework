@@ -14,7 +14,7 @@
             <h5>Bölüm Seçme Sayfası</h5>
         </div>
         <div class="card-block">
-            <form class="form-material" asp-action="SelectingDateHourTime">
+            <form class="form-material" asp-action="FormAppointment">
                 <input type="hidden" asp-for="UserId" value="@Model.UserId" />
                 <input type="hidden" asp-for="Name" value="@Model.Name" />
                 <input type="hidden" asp-for="SurName" value="@Model.SurName" />
@@ -25,7 +25,7 @@
                 <input type="hidden" asp-for="DoctorId" value="@Model.DoctorId" />
                 <input type="hidden" asp-for="PoliclinicId" value="@Model.PoliclinicId" />
                 <input type="hidden" asp-for="PoliclinicName" value="@Model.PoliclinicName" />
-                <input type="hidden" asp-for="AppointmentDateTime" value="@Model.AppointmentDateTime" />
+                @*<input type="hidden" asp-for="AppointmentDateTime" value="@Model.AppointmentDateTime" />*@
                 <div class="form-group form-default">
                     <input type="text" disabled class="form-control" required="" value="@Model.Name @Model.SurName">
                     <span class="form-bar"></span>
@@ -81,6 +81,7 @@
 {
     <script>
         $(".selectTime").mousedown(function () {
+            $('.selectTime').attr('class', 'selectTime btn waves-effect waves-light btn-secondary');
             var dateTime = $(this).attr("value");
             $("#appDateTime").attr("value", dateTime);
             $(this).removeClass('btn-secondary').addClass('btn-success');

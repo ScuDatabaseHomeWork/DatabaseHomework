@@ -20,5 +20,10 @@ namespace HospitalAppointment.Business.Concrete
         {
             return _appointmentDal.GetAppointmentsHourTimesByAppointmentDayAndDoctorId(day, doctorId);
         }
+
+        public List<Appointment> GetPatientRegistrarAppointmentsWithAllTables(int id)
+        {
+            return _appointmentDal.GetPatientRegistrarAppointmentsWithAllTables(id);
+        }
     }
 }

@@ -8,5 +8,6 @@ namespace HospitalAppointment.Business.Interfaces
     public interface IAppointmentService:IGenericService<Appointment>
     {
         List<DateTime> GetAppointmentsHourTimesByAppointmentDayAndDoctorId(DateTime day, int doctorId);
+        List<Appointment> GetPatientRegistrarAppointmentsWithAllTables(int id);
     }
 }

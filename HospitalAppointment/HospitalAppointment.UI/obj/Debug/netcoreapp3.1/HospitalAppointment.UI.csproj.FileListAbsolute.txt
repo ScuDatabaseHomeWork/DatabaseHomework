@@ -179,3 +179,8 @@ C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppoi
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Appointment\SelectingDoctor.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Appointment\SelectingDateDay.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Appointment\SelectingDateHourTime.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Appointment\FormAppointment.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Patient\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Patient\Views\_ViewImports.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Patient\Views\_ViewStart.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Patient\Views\Home\Index.cshtml.g.cs

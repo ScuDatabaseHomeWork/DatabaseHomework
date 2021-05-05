@@ -5,6 +5,7 @@ using System.Text;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Context;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities;
 using HospitalAppointment.DataAccess.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositories
 {
@@ -26,6 +27,14 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
                 AppointmentsHourTimes.Add(existHourTime.Date);
             }
             return AppointmentsHourTimes;
+        }
+
+        public List<Appointment> GetPatientRegistrarAppointmentsWithAllTables(int id)
+        {
+            return _context.Appointments.Where(I => I.RegistrarId == id)
+                .Include(I => I.Doctor.User)
+                .Include(I => I.Patient.User)
+                .Include(I => I.Registrar.User).ToList();
         }
     }
 }

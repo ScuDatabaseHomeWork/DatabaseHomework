@@ -50,7 +50,7 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
                 Password = patientAddDto.Password
             };
             int userId = _userService.AddWithRetObject(patientUser).Id;
-            var patient = new Patient()
+            var patient = new DataAccess.Concrete.EntityFrameworkCore.Entities.Patient()
             {
                 AnaAdi = patientAddDto.AnaAdi,
                 BabaAdi = patientAddDto.BabaAdi,

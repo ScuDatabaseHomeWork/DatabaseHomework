@@ -36,5 +36,10 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             }
         }
 
+        public Patient GetPatientByUserId(int id)
+        {
+            return _context.Patients.FirstOrDefault(I => I.UserId == id);
+        }
+
     }
 }
