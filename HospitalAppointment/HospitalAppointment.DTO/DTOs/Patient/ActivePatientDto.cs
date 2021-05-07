@@ -15,7 +15,6 @@ namespace HospitalAppointment.DTO.DTOs.Patient
         public DateTime BirthDate { get; set; }
         public long Telephone { get; set; }
         public bool Gender { get; set; }
-        public int PatientId { get; set; }
         public string AnaAdi { get; set; }
         public string BabaAdi { get; set; }
     }

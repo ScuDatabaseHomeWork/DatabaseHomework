@@ -108,22 +108,37 @@
                                 </div>
 
                             </div>
-                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Hasta Menü</div>
+
+                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Randevu Menü</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="CreatePatient" asp-controller="Patient">
+                                    <a class="waves-effect waves-dark" asp-action="SelectingDepartment" asp-controller="Appointment">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Hasta Ekle</span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Randevu Al</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="waves-effect waves-dark" asp-action="PastAppointments" asp-controller="Appointment">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Geçmiş Randevular</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="waves-effect waves-dark" asp-action="FutureAppointments" asp-controller="Appointment">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Gelecek Randevular</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
                             </ul>
-                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Randevu Menü</div>
+                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Karaliste Menü</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="SelectingPatient" asp-controller="Appointment">
+                                    <a class="waves-effect waves-dark" asp-action="MyProfil" asp-controller="Home">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Hastaya Randevu ver</span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Karalistelerim</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
@@ -131,7 +146,7 @@
                             <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Profil Menü</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="MyProfil" asp-controller="Home">
+                                    <a class="waves-effect waves-dark" asp-action="MyProfile" asp-controller="Home">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.dash.main">Profilim</span>
                                         <span class="pcoded-mcaret"></span>

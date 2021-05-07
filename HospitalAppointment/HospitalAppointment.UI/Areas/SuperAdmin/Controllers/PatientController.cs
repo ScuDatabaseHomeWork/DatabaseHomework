@@ -60,13 +60,13 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
             int userId = _userService.AddWithRetObject(patientUser).Id;
             var patient = new DataAccess.Concrete.EntityFrameworkCore.Entities.Patient()
             {
+                Id = userId,
                 AnaAdi = patientAddDto.AnaAdi,
                 BabaAdi = patientAddDto.BabaAdi,
-                UserId = userId,
-                SuperAdminId = 1//Daha sonra refactor et
+                SuperAdminId = _activeSuperAdmin.GetActiveSuperAdmin().UserId
             };
             _patientService.Add(patient);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Patient");
         }
       
     }

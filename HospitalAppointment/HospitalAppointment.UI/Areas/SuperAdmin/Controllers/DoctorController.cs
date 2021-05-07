@@ -65,17 +65,17 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
                 Password = doctorAddDto.Password
             };
             int userId = _userService.AddWithRetObject(doctorUser).Id;
-            var doctor = new Doctor()
+            var doctor = new DataAccess.Concrete.EntityFrameworkCore.Entities.Doctor()
             {
+                Id = userId,
                 DepartmentId = doctorAddDto.DepartmentId,
                 Apellation = doctorAddDto.Apellation,
-                UserId = userId,
-                SuperAdminId = 1 //DAHA SONRA BUNA Bİ REFACTOR ÇEK
+                SuperAdminId = _activeSuperAdmin.GetActiveSuperAdmin().UserId
             };
-            var doctorId = _doctorService.AddWithRetObject(doctor).Id;
+            _doctorService.Add(doctor);
             var policlinic = new Policlinic()
             {
-                Id = doctorId,
+                Id = userId,
                 DepartmentId = doctorAddDto.DepartmentId,
                 PoliclinicName = doctorAddDto.PoliclinicName
             };

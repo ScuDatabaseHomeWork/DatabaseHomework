@@ -26,9 +26,9 @@ namespace HospitalAppointment.UI.Tools.ActiveUserContext
         public ActivePatientRegistrarDto GetActivePatientRegistrar()
         {
             int userId = Convert.ToInt32(_httpContextAccessor.HttpContext.User.Claims.Where(c => c.Type == "UserId").Select(c => c.Value).SingleOrDefault());
-            int patientRegistrarId = Convert.ToInt32(_httpContextAccessor.HttpContext.User.Claims.Where(c => c.Type == "PatientRegistrarId").Select(c => c.Value).SingleOrDefault());
+          //  int patientRegistrarId = Convert.ToInt32(_httpContextAccessor.HttpContext.User.Claims.Where(c => c.Type == "PatientRegistrarId").Select(c => c.Value).SingleOrDefault());
             var activeUser = _userService.GetById(userId);
-            var patientRegistrar = _patientRegistrarService.GetById(patientRegistrarId);
+            var patientRegistrar = _patientRegistrarService.GetById(userId);
             _activePatientRegistrar.UserId = activeUser.Id;
             _activePatientRegistrar.Tcno = activeUser.Tcno;
             _activePatientRegistrar.RolId = activeUser.RolId;
@@ -38,7 +38,6 @@ namespace HospitalAppointment.UI.Tools.ActiveUserContext
             _activePatientRegistrar.BirthDate = activeUser.BirthDate;
             _activePatientRegistrar.Telephone = activeUser.Telephone;
             _activePatientRegistrar.Gender = activeUser.Gender;
-            _activePatientRegistrar.PatientRegistrarId = patientRegistrar.Id;
             _activePatientRegistrar.TellerNumber = patientRegistrar.TellerNumber;
             return _activePatientRegistrar;
         }

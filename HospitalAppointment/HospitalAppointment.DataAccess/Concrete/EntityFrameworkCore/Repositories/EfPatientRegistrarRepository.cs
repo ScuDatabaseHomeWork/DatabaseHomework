@@ -17,14 +17,15 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             _context = context;
         }
 
-        public List<PatientRegistrar> GetPatientRegistrarsWithAllTables()
+        public List<User> GetPatientRegistrarsWithAllTables()
         {
-            return _context.PatientRegistrars.Include(I => I.User).ToList();
+            return _context.Users.Where(I => I.Rol.RolName == "PatientRegistrar").Include(I => I.PatientRegistrar).ToList();
         }
 
         public PatientRegistrar GetPatientRegistrarByUserId(int id)
         {
-            return _context.PatientRegistrars.FirstOrDefault(I => I.UserId == id);
+            //return _context.PatientRegistrars.FirstOrDefault(I => I.UserId == id);
+            return null;
         }
     }
 }

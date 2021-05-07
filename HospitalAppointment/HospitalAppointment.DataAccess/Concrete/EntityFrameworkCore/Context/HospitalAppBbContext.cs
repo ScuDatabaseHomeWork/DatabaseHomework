@@ -33,8 +33,8 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+            { 
+                //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=HospitalAppDB;Integrated Security=True");
             }
         }
@@ -56,7 +56,6 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Context
                 entity.HasOne(d => d.Patient)
                     .WithMany(p => p.Appointments)
                     .HasForeignKey(d => d.PatientId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Appointment_Patient");
 
                 entity.HasOne(d => d.Registrar)
@@ -76,59 +75,60 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Context
                 entity.HasOne(d => d.Patient)
                     .WithMany(p => p.BlackLists)
                     .HasForeignKey(d => d.PatientId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_BlackList_Patient");
             });
 
             modelBuilder.Entity<Doctor>(entity =>
             {
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
                 entity.HasOne(d => d.Department)
                     .WithMany(p => p.Doctors)
                     .HasForeignKey(d => d.DepartmentId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Doctor_Department");
+
+                entity.HasOne(d => d.IdNavigation)
+                    .WithOne(p => p.Doctor)
+                    .HasForeignKey<Doctor>(d => d.Id)
+                    .HasConstraintName("FK_Doctor_User1");
 
                 entity.HasOne(d => d.SuperAdmin)
                     .WithMany(p => p.Doctors)
                     .HasForeignKey(d => d.SuperAdminId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Doctor_SuperAdmin");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.Doctors)
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Doctor_User");
             });
 
             modelBuilder.Entity<Patient>(entity =>
             {
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.HasOne(d => d.IdNavigation)
+                    .WithOne(p => p.Patient)
+                    .HasForeignKey<Patient>(d => d.Id)
+                    .HasConstraintName("FK_Patient_User1");
+
                 entity.HasOne(d => d.SuperAdmin)
                     .WithMany(p => p.Patients)
                     .HasForeignKey(d => d.SuperAdminId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Patient_SuperAdmin");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.Patients)
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Patient_User");
             });
 
             modelBuilder.Entity<PatientRegistrar>(entity =>
             {
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.HasOne(d => d.IdNavigation)
+                    .WithOne(p => p.PatientRegistrar)
+                    .HasForeignKey<PatientRegistrar>(d => d.Id)
+                    .HasConstraintName("FK_PatientRegistrar_User1");
+
                 entity.HasOne(d => d.SuperAdmin)
                     .WithMany(p => p.PatientRegistrars)
                     .HasForeignKey(d => d.SuperAdminId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_PatientRegistrar_SuperAdmin");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.PatientRegistrars)
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_PatientRegistrar_User");
             });
 
             modelBuilder.Entity<Policlinic>(entity =>
@@ -138,7 +138,6 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Context
                 entity.HasOne(d => d.Department)
                     .WithMany(p => p.Policlinics)
                     .HasForeignKey(d => d.DepartmentId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Policlinic_Department");
 
                 entity.HasOne(d => d.IdNavigation)
@@ -159,17 +158,17 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Context
                 entity.HasOne(d => d.Patient)
                     .WithMany(p => p.Prescribes)
                     .HasForeignKey(d => d.PatientId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Prescribe_Patient");
             });
 
             modelBuilder.Entity<SuperAdmin>(entity =>
             {
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.SuperAdmins)
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_SuperAdmin_User");
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.HasOne(d => d.IdNavigation)
+                    .WithOne(p => p.SuperAdmin)
+                    .HasForeignKey<SuperAdmin>(d => d.Id)
+                    .HasConstraintName("FK_SuperAdmin_User1");
             });
 
             modelBuilder.Entity<User>(entity =>

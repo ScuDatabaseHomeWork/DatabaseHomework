@@ -26,15 +26,14 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities
         [Required]
         [StringLength(50)]
         public string BabaAdi { get; set; }
-        public int UserId { get; set; }
         public int SuperAdminId { get; set; }
 
+        [ForeignKey(nameof(Id))]
+        [InverseProperty(nameof(User.Patient))]
+        public virtual User IdNavigation { get; set; }
         [ForeignKey(nameof(SuperAdminId))]
         [InverseProperty("Patients")]
         public virtual SuperAdmin SuperAdmin { get; set; }
-        [ForeignKey(nameof(UserId))]
-        [InverseProperty("Patients")]
-        public virtual User User { get; set; }
         [InverseProperty(nameof(Appointment.Patient))]
         public virtual ICollection<Appointment> Appointments { get; set; }
         [InverseProperty(nameof(BlackList.Patient))]

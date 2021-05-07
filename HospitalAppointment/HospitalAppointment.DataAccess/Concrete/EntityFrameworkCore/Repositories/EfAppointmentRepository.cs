@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositories
 {
-    public class EfAppointmentRepository:EfGenericRepository<Appointment>,IAppointmentDal
+    public class EfAppointmentRepository : EfGenericRepository<Appointment>, IAppointmentDal
     {
         private readonly HospitalAppBbContext _context;
         public EfAppointmentRepository(HospitalAppBbContext context) : base(context)
@@ -17,7 +17,7 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             _context = context;
         }
 
-        public List<DateTime> GetAppointmentsHourTimesByAppointmentDayAndDoctorId(DateTime day,int doctorId)
+        public List<DateTime> GetAppointmentsHourTimesByAppointmentDayAndDoctorId(DateTime day, int doctorId)
         {
             List<Appointment> ExistHourTimes = _context.Appointments.Where(I => I.Date.DayOfYear == day.DayOfYear)
                 .Where(I => I.DoctorId == doctorId).ToList();
@@ -31,10 +31,47 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
 
         public List<Appointment> GetPatientRegistrarAppointmentsWithAllTables(int id)
         {
-            return _context.Appointments.Where(I => I.RegistrarId == id)
-                .Include(I => I.Doctor.User)
-                .Include(I => I.Patient.User)
-                .Include(I => I.Registrar.User).ToList();
+            var appointments = _context.Appointments
+                .Include(I => I.Doctor)
+                .Include(I => I.Patient)
+                .Where(I => I.RegistrarId == id).ToList();
+            return appointments;
+        }
+
+        public List<Appointment> GetPatientPastAppointmentsByPatientId(int id)
+        {
+            return _context.Appointments
+                .Include(I => I.Doctor)
+                .Include(I => I.Registrar)
+                .Where(I => I.PatientId == id).Where(I => I.Date <= DateTime.Now)
+                .ToList();
+        }
+
+        public List<Appointment> GetPatientFutureAppointmentsByPatientId(int id)
+        {
+            return _context.Appointments
+                .Include(I => I.Doctor)
+                .Include(I => I.Registrar)
+                .Where(I => I.PatientId == id).Where(I => I.Date > DateTime.Now)
+                .ToList();
+        }
+
+        public List<Appointment> GetTodayAppointmentsByDoctorId(int id)
+        {
+            var today = DateTime.Today.ToShortDateString();
+            var doctorAppointments = _context.Appointments
+                .Include(I => I.Registrar)
+                .Include(I => I.Patient)
+                .Where(I => I.DoctorId == id).ToList();
+            List<Appointment> todayDoctorAppointments = new List<Appointment>();
+            foreach (var doctorAppointment in doctorAppointments)
+            {
+                if (doctorAppointment.Date.ToShortDateString() == today)
+                {
+                    todayDoctorAppointments.Add(doctorAppointment);
+                }
+            }
+            return todayDoctorAppointments;
         }
     }
 }

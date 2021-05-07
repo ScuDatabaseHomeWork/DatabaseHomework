@@ -11,14 +11,6 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities
     [Table("User")]
     public partial class User
     {
-        public User()
-        {
-            Doctors = new HashSet<Doctor>();
-            PatientRegistrars = new HashSet<PatientRegistrar>();
-            Patients = new HashSet<Patient>();
-            SuperAdmins = new HashSet<SuperAdmin>();
-        }
-
         [Key]
         public int Id { get; set; }
         [Column("TCNo")]
@@ -44,13 +36,13 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities
         [ForeignKey(nameof(RolId))]
         [InverseProperty("Users")]
         public virtual Rol Rol { get; set; }
-        [InverseProperty(nameof(Doctor.User))]
-        public virtual ICollection<Doctor> Doctors { get; set; }
-        [InverseProperty(nameof(PatientRegistrar.User))]
-        public virtual ICollection<PatientRegistrar> PatientRegistrars { get; set; }
-        [InverseProperty(nameof(Patient.User))]
-        public virtual ICollection<Patient> Patients { get; set; }
-        [InverseProperty(nameof(SuperAdmin.User))]
-        public virtual ICollection<SuperAdmin> SuperAdmins { get; set; }
+        [InverseProperty("IdNavigation")]
+        public virtual Doctor Doctor { get; set; }
+        [InverseProperty("IdNavigation")]
+        public virtual Patient Patient { get; set; }
+        [InverseProperty("IdNavigation")]
+        public virtual PatientRegistrar PatientRegistrar { get; set; }
+        [InverseProperty("IdNavigation")]
+        public virtual SuperAdmin SuperAdmin { get; set; }
     }
 }

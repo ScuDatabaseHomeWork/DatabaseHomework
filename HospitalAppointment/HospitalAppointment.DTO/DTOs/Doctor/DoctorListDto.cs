@@ -7,7 +7,7 @@ namespace HospitalAppointment.DTO.DTOs.Doctor
     public class DoctorListDto
     {
         public int Id { get; set; }
-        public long Tcno { get; set; }
+        public long TCNo { get; set; }
         public int RolId { get; set; }
         public string Name { get; set; }
         public string SurName { get; set; }
@@ -15,10 +15,7 @@ namespace HospitalAppointment.DTO.DTOs.Doctor
         public DateTime BirthDate { get; set; }
         public long Telephone { get; set; }
         public bool Gender { get; set; }
-        public DataAccess.Concrete.EntityFrameworkCore.Entities.Department Department { get; set; }
-        public string Apellation { get; set; }
-        public  DataAccess.Concrete.EntityFrameworkCore.Entities.User User { get; set; }
-        public DataAccess.Concrete.EntityFrameworkCore.Entities.Policlinic Policlinic { get; set; }
-   
+        public DataAccess.Concrete.EntityFrameworkCore.Entities.Doctor Doctor { get; set; }
+
     }
 }

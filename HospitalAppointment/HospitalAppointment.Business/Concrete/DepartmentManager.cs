@@ -15,9 +15,9 @@ namespace HospitalAppointment.Business.Concrete
             _departmentDal = departmentDal;
         }
 
-        public List<Department> GetWithDepartments()
+        public List<Department> GetWithPoliclinics()
         {
-          return  _departmentDal.GetWithDepartments();
+          return  _departmentDal.GetWithPoliclinics();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace HospitalAppointment.Business.Concrete
             _patientRegistrarDal = patientRegistrarDal;
         }
 
-        public List<PatientRegistrar> GetPatientRegistrarsWithAllTables()
+        public List<User> GetPatientRegistrarsWithAllTables()
         {
             return _patientRegistrarDal.GetPatientRegistrarsWithAllTables();
         }

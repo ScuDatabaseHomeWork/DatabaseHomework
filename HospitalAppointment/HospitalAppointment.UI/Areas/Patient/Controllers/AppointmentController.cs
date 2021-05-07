@@ -5,23 +5,133 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using HospitalAppointment.Business.Interfaces;
+using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities;
+using HospitalAppointment.DTO.DTOs.Appointment;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HospitalAppointment.UI.Areas.Patient.Controllers
 {
+    [Area("Patient")]
     public class AppointmentController : Controller
     {
         private ActivePatient _activePatient;
         private readonly IMapper _mapper;
-        public AppointmentController(IMapper mapper, IHttpContextAccessor httpContextAccessor, IUserService userService, IPatientService patientService)
+        private readonly IAppointmentService _appointmentService;
+        private readonly IDepartmentService _departmentService;
+        private readonly IDoctorService _doctorService;
+        private readonly IUserService _userService;
+        private readonly IPoliclinicService _policlinicService;
+        public AppointmentController(IPoliclinicService policlinicService,IDoctorService doctorService,IDepartmentService departmentService,IAppointmentService appointmentService,IMapper mapper, IHttpContextAccessor httpContextAccessor, IUserService userService, IPatientService patientService)
         {
             _activePatient = new ActivePatient(httpContextAccessor, userService, patientService);
             _mapper = mapper;
+            _appointmentService = appointmentService;
+            _departmentService = departmentService;
+            _doctorService = doctorService;
+            _userService = userService;
+            _policlinicService = policlinicService;
         }
+
+        public IActionResult PastAppointments()
+        {
+            TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
+            var patientPastAppointments = _mapper.Map<List<AppointmentsOfPatient>>(
+                _appointmentService.GetPatientPastAppointmentsByPatientId(_activePatient.GetActivePatient().UserId));
+            return View(patientPastAppointments);
+        }
+
+        public IActionResult FutureAppointments()
+        {
+            TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
+            var patientFutureAppointments = _mapper.Map<List<AppointmentsOfPatient>>(
+                _appointmentService.GetPatientFutureAppointmentsByPatientId(_activePatient.GetActivePatient().UserId));
+            return View(patientFutureAppointments);
+        }
+
+
         public IActionResult SelectingDepartment()
         {
-            return View();
+            var appointmentUserDto = new AppointmentUserDto()
+            {
+                UserId = _activePatient.GetActivePatient().UserId,
+                Name = _activePatient.GetActivePatient().Name,
+                SurName = _activePatient.GetActivePatient().SurName,
+            };
+            TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
+            ViewBag.Departments = new SelectList(_departmentService.GetAll(), "Id", "DepartmanName");
+            return View(appointmentUserDto);
         }
+
+
+        public IActionResult SelectingDoctor(AppointmentUserDto appointmentUserDto)
+        {
+            TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
+            appointmentUserDto.DepartmentName = _departmentService.GetById(appointmentUserDto.DepartmentId).DepartmanName;
+            ViewBag.DepartmentDoctors = new SelectList(_doctorService.GetDepartmentDoctorsByDepartmentId(appointmentUserDto.DepartmentId), "Id", "Name");
+            return View(appointmentUserDto);
+        }
+
+        public IActionResult SelectingDateDay(AppointmentUserDto appointmentUserDto)
+        {
+            TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
+            var appointmentDoctorUser = _userService.GetById(appointmentUserDto.DoctorUserId);
+            appointmentUserDto.DoctorUserName = appointmentDoctorUser.Name;
+            //  var appointmentDoctor = _doctorService.GetDoctorByUserId(appointmentDoctorUser.Id);
+            // appointmentUserDto.DoctorId = appointmentDoctor.Id;
+            var doctorPoliclinic = _policlinicService.GetById(appointmentUserDto.DoctorUserId);
+            appointmentUserDto.PoliclinicId = doctorPoliclinic.Id;
+            appointmentUserDto.PoliclinicName = doctorPoliclinic.PoliclinicName;
+            List<DateTime> dateDays = new List<DateTime>();
+
+            int i = 1;
+            while (true)
+            {
+                if (DateTime.Today.AddDays(i).DayOfWeek != DayOfWeek.Saturday && DateTime.Today.AddDays(i).DayOfWeek != DayOfWeek.Sunday)
+                {
+                    dateDays.Add(DateTime.Today.AddDays(i));
+                }
+
+                if (dateDays.Count == 7)
+                {
+                    break;
+                }
+                i++;
+            }
+            ViewBag.DateDays = dateDays;
+            return View(appointmentUserDto);
+        }
+
+        public IActionResult SelectingDateHourTime(AppointmentUserDto appointmentUserDto)
+        {
+            TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
+            List<DateTime> existDateHourTimes =
+                _appointmentService.GetAppointmentsHourTimesByAppointmentDayAndDoctorId(appointmentUserDto.AppointmentDateTime, appointmentUserDto.DoctorUserId);
+            ViewBag.existDateHourTimes = existDateHourTimes;
+            return View(appointmentUserDto);
+        }
+
+        public IActionResult FormAppointment(AppointmentUserDto appointmentUserDto)
+        {
+            TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
+            return View(appointmentUserDto);
+        }
+
+        [HttpPost]
+        public IActionResult CreateAppointment(AppointmentUserDto appointmentUserDto)
+        {
+
+            Appointment appointment = new Appointment()
+            {
+                DoctorId = appointmentUserDto.DoctorUserId,
+                Date = appointmentUserDto.AppointmentDateTime,
+                PatientId = appointmentUserDto.UserId,
+                RegistrarId = null
+            };
+            _appointmentService.Add(appointment);
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }

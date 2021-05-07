@@ -26,11 +26,11 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                            <td>@item.User.Name @item.User.SurName</td>
-                            <td>@item.User.Telephone</td>
-                            <td>@item.AnaAdi</td>
-                            <td>@item.BabaAdi</td>
-                            <td>@item.User.Email</td>
+                            <td>@item.Name @item.SurName</td>
+                            <td>@item.Telephone</td>
+                            <td>@item.Patient.AnaAdi</td>
+                            <td>@item.Patient.BabaAdi</td>
+                            <td>@item.Email</td>
                         </tr>
                     }
                 </tbody>

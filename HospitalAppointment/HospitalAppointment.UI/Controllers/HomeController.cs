@@ -51,38 +51,26 @@ namespace HospitalAppointment.UI.Controllers
                 var claims = new List<Claim>()
                 {
                     new Claim("UserId",user.Id.ToString()),
-                    //new Claim("TCNo", user.Tcno.ToString()),
-                    //new Claim(ClaimTypes.Name, user.Name),
-                    //new Claim(ClaimTypes.Surname,user.SurName),
-                    //new Claim(ClaimTypes.Email,user.Email),
-                    //new Claim(ClaimTypes.DateOfBirth,user.BirthDate.ToString()),
-                    //new Claim(ClaimTypes.MobilePhone,user.Telephone.ToString()),
-                    //new Claim(ClaimTypes.Gender,user.Gender == true ? "Erkek":"Kadın")
                 };
                 if (userRole == "SuperAdmin")
                 {
                     claims.Add(new Claim(ClaimTypes.Role, "SuperAdmin"));
-                    var superAdmin = _superAdminService.GetSuperAdminByUserId(user.Id);
-                    claims.Add(new Claim("SuperAdminId", superAdmin.Id.ToString()));
-                    //claims.Add(new Claim("Apellation", superAdmin.Apellation));
                     return LoginWithClaims(claims, "SuperAdmin");
                 }
                 else if (userRole == "Patient")
                 {
                     claims.Add(new Claim(ClaimTypes.Role,"Patient"));
-                    var patient = _patientService.GetPatientByUserId(user.Id);
-                    claims.Add(new Claim("PatientId",patient.Id.ToString()));
                     return LoginWithClaims(claims, "Patient");
                 }
                 else if (userRole == "Doctor")
                 {
+                    claims.Add(new Claim(ClaimTypes.Role, "Doctor"));
+                    return LoginWithClaims(claims, "Doctor");
                 }
                 else if (userRole == "PatientRegistrar")
                 {
                     claims.Add(new Claim(ClaimTypes.Role, "PatientRegistrar"));
-                    var patientRegistrar = _patientRegistrarService.GetPatientRegistrarByUserId(user.Id);
-                    claims.Add(new Claim("PatientRegistrarId", patientRegistrar.Id.ToString()));
-                    return LoginWithClaims(claims, "PatientRegistrar");
+                   return LoginWithClaims(claims, "PatientRegistrar");
                 }
 
                 ModelState.AddModelError("", "Bir şeyler yanlış gitti");

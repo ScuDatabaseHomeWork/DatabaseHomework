@@ -15,7 +15,6 @@ namespace HospitalAppointment.DTO.DTOs.SuperAdmin
         public DateTime BirthDate { get; set; }
         public long Telephone { get; set; }
         public bool Gender { get; set; }
-        public int SuperAdminId { get; set; }
         public string Apellation { get; set; }
     }
 }

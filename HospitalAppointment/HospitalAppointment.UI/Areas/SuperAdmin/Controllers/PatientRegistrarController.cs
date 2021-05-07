@@ -63,9 +63,9 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
             int userId = _userService.AddWithRetObject(patientRegistrarUser).Id;
             var patientRegistrar = new DataAccess.Concrete.EntityFrameworkCore.Entities.PatientRegistrar()
             {
-                UserId = userId,
+                Id = userId,
                 TellerNumber = patientRegistrarAddDto.TellerNumber,
-                SuperAdminId = 1
+                SuperAdminId = _activeSuperAdmin.GetActiveSuperAdmin().UserId
             };
             _patientRegistrarService.Add(patientRegistrar);
             return RedirectToAction("Index");

@@ -18,25 +18,30 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             _context = context;
         }
 
-        public List<Doctor> GetDoctorsWithAllTables()
+        public List<User> GetDoctorsWithAllTables()
         {
-            return _context.Doctors.Include(I => I.User).Include(I => I.Department).Include(I => I.Policlinic).ToList();
+            return _context.Users.Where(I => I.Rol.RolName == "Doctor").Include(I => I.Doctor).ThenInclude(I => I.Department)
+                .ThenInclude(I => I.Policlinics).ToList();
         }
 
         public List<User> GetDepartmentDoctorsByDepartmentId(int id)
         {
-            var doctors = _context.Doctors.Where(I => I.DepartmentId == id).Include(I => I.User).ToList();
-            List<User> doctorUsers = new List<User>();
-            foreach (var doctor in doctors)
-            {
-                doctorUsers.Add(_context.Users.FirstOrDefault(I=>I.Id == doctor.UserId));
-            }
-            return doctorUsers;
+            var doctors = _context.Users.Include(I => I.Doctor).Where(I => I.Doctor.DepartmentId == id).ToList();
+            return doctors;
+            //var doctors = _context.Doctors.Where(I => I.DepartmentId == id).Include(I => I.User).ToList();
+            //List<User> doctorUsers = new List<User>();
+            //foreach (var doctor in doctors)
+            //{
+            //    doctorUsers.Add(_context.Users.FirstOrDefault(I => I.Id == doctor.UserId));
+            //}
+            //return doctorUsers;
+
         }
 
         public Doctor GetDoctorByUserId(int id)
         {
-            return _context.Doctors.FirstOrDefault(I => I.UserId == id);
+            //return _context.Doctors.FirstOrDefault(I => I.UserId == id);
+            return null;
         }
     }
 }

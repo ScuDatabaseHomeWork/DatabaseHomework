@@ -15,7 +15,6 @@ namespace HospitalAppointment.Business.Concrete
             _appointmentDal = appointmentDal;
         }
 
-
         public List<DateTime> GetAppointmentsHourTimesByAppointmentDayAndDoctorId(DateTime day, int doctorId)
         {
             return _appointmentDal.GetAppointmentsHourTimesByAppointmentDayAndDoctorId(day, doctorId);
@@ -24,6 +23,21 @@ namespace HospitalAppointment.Business.Concrete
         public List<Appointment> GetPatientRegistrarAppointmentsWithAllTables(int id)
         {
             return _appointmentDal.GetPatientRegistrarAppointmentsWithAllTables(id);
+        }
+
+        public List<Appointment> GetPatientPastAppointmentsByPatientId(int id)
+        {
+            return _appointmentDal.GetPatientPastAppointmentsByPatientId(id);
+        }
+
+        public List<Appointment> GetPatientFutureAppointmentsByPatientId(int id)
+        {
+            return _appointmentDal.GetPatientFutureAppointmentsByPatientId(id);
+        }
+
+        public List<Appointment> GetTodayAppointmentsByDoctorId(int id)
+        {
+            return _appointmentDal.GetTodayAppointmentsByDoctorId(id);
         }
     }
 }

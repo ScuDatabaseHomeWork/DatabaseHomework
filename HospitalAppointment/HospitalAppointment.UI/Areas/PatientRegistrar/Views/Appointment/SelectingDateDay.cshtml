@@ -13,7 +13,7 @@
             <h5>Bölüm Seçme Sayfası</h5>
         </div>
         <div class="card-block">
-            <form class="form-material" asp-action="SelectingDateHourTime">
+            <form class="form-material" asp-action="SelectingDateHourTime" method="post">
                 <input type="hidden" asp-for="UserId" value="@Model.UserId" />
                 <input type="hidden" asp-for="Name" value="@Model.Name" />
                 <input type="hidden" asp-for="SurName" value="@Model.SurName" />
@@ -21,7 +21,7 @@
                 <input type="hidden" asp-for="DepartmentName" value="@Model.DepartmentName" />
                 <input type="hidden" asp-for="DoctorUserId" value="@Model.DoctorUserId" />
                 <input type="hidden" asp-for="DoctorUserName" value="@Model.DoctorUserName" />
-                <input type="hidden" asp-for="DoctorId" value="@Model.DoctorId" />
+                @*<input type="hidden" asp-for="DoctorId" value="@Model.DoctorId" />*@
                 <input type="hidden" asp-for="PoliclinicId" value="@Model.PoliclinicId" />
                 <input type="hidden" asp-for="PoliclinicName" value="@Model.PoliclinicName" />
                 <div class="form-group form-default">

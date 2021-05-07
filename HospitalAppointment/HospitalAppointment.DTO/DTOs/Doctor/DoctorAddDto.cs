@@ -18,9 +18,7 @@ namespace HospitalAppointment.DTO.DTOs.Doctor
 
         public int DepartmentId { get; set; }
         public string Apellation { get; set; }
-        public int UserId { get; set; }
-        public int SuperAdminId { get; set; }
-
+        
         public string PoliclinicName { get; set; }
     }
 }

@@ -7,7 +7,7 @@ namespace HospitalAppointment.DataAccess.Interfaces
 {
     public interface IPatientDal:IGenericDal<Patient>
     {
-        List<Patient> GetPatientsWithAllTables();
+        List<User> GetPatientsWithAllTables();
         User CheckAndGetPatientByTcNo(long tc);
         Patient GetPatientByUserId(int id);
     }

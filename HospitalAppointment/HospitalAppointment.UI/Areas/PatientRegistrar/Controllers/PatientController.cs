@@ -52,10 +52,10 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
             int userId = _userService.AddWithRetObject(patientUser).Id;
             var patient = new DataAccess.Concrete.EntityFrameworkCore.Entities.Patient()
             {
+                Id = userId,
                 AnaAdi = patientAddDto.AnaAdi,
                 BabaAdi = patientAddDto.BabaAdi,
-                UserId = userId,
-                SuperAdminId = 1//Daha sonra refactor et
+                SuperAdminId = 3008
             };
             _patientService.Add(patient);
             return RedirectToAction("Index","Home");

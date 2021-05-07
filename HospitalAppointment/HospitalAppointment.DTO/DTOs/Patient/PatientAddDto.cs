@@ -18,7 +18,6 @@ namespace HospitalAppointment.DTO.DTOs.Patient
 
         public string AnaAdi { get; set; }
         public string BabaAdi { get; set; }
-        public int UserId { get; set; }
-        public int SuperAdminId { get; set; }
+
     }
 }

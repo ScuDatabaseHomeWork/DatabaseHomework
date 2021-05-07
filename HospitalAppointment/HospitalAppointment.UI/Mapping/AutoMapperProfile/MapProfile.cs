@@ -30,6 +30,10 @@ namespace HospitalAppointment.UI.Mapping.AutoMapperProfile
             CreateMap<AppointmentUpdateDto, Appointment>();
             CreateMap<Appointment, AppointmentsOfPatientRegistrar>();
             CreateMap<AppointmentsOfPatientRegistrar, Appointment>();
+            CreateMap<Appointment, AppointmentsOfPatient>();
+            CreateMap<AppointmentsOfPatient, Appointment>();
+            CreateMap<Appointment, AppointmentsOfDoctorDto>();
+            CreateMap<AppointmentsOfDoctorDto, Appointment>();
             #endregion
 
             #region BlackList-BlackListDto
@@ -55,8 +59,8 @@ namespace HospitalAppointment.UI.Mapping.AutoMapperProfile
             #region Doctor-DoctorDto
             CreateMap<Doctor, DoctorAddDto>();
             CreateMap<DoctorAddDto, Doctor>();
-            CreateMap<Doctor, DoctorListDto>();
-            CreateMap<DoctorListDto, Doctor>();
+            CreateMap<User, DoctorListDto>();
+            CreateMap<DoctorListDto, User>();
             CreateMap<Doctor, DoctorUpdateDto>();
             CreateMap<DoctorUpdateDto, Doctor>();
             #endregion
@@ -64,8 +68,8 @@ namespace HospitalAppointment.UI.Mapping.AutoMapperProfile
             #region Patient-PatientDto
             CreateMap<Patient, PatientAddDto>();
             CreateMap<PatientAddDto, Patient>();
-            CreateMap<Patient, PatientListDto>();
-            CreateMap<PatientListDto, Patient>();
+            CreateMap<User, PatientListDto>();
+            CreateMap<PatientListDto, User>();
             CreateMap<Patient, PatientUpdateDto>();
             CreateMap<PatientUpdateDto, Patient>();
             #endregion
@@ -73,8 +77,8 @@ namespace HospitalAppointment.UI.Mapping.AutoMapperProfile
             #region PatientRegistrar-PatientRegistrarDto
             CreateMap<PatientRegistrar, PatientRegistrarAddDto>();
             CreateMap<PatientRegistrarAddDto, PatientRegistrar>();
-            CreateMap<PatientRegistrar, PatientRegistrarListDto>();
-            CreateMap<PatientRegistrarListDto, PatientRegistrar>();
+            CreateMap<User, PatientRegistrarListDto>();
+            CreateMap<PatientRegistrarListDto, User>();
             CreateMap<PatientRegistrar, PatientRegistrarUpdateDto>();
             CreateMap<PatientRegistrarUpdateDto, PatientRegistrar>();
             #endregion

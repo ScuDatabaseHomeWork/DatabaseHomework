@@ -7,6 +7,6 @@ namespace HospitalAppointment.DataAccess.Interfaces
 {
     public interface IDepartmentDal:IGenericDal<Department>
     {
-        List<Department> GetWithDepartments();
+        List<Department> GetWithPoliclinics();
     }
 }

@@ -18,7 +18,7 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
 
         public SuperAdmin GetSuperAdminByUserId(int id)
         {
-            return _context.SuperAdmins.FirstOrDefault(I => I.UserId == id);
+            return _context.SuperAdmins.FirstOrDefault(I => I.Id == id);
         }
     }
 }

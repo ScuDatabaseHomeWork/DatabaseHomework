@@ -21,6 +21,7 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities
         public string Medicine { get; set; }
         public int DoctorId { get; set; }
         public int PatientId { get; set; }
+        public string Description { get; set; }
 
         [ForeignKey(nameof(DoctorId))]
         [InverseProperty("Prescribes")]

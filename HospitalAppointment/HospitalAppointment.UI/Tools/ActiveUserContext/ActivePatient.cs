@@ -26,9 +26,9 @@ namespace HospitalAppointment.UI.Tools.ActiveUserContext
         public ActivePatientDto GetActivePatient()
         {
             int userId = Convert.ToInt32(_httpContextAccessor.HttpContext.User.Claims.Where(c => c.Type == "UserId").Select(c => c.Value).SingleOrDefault());
-            int patientId = Convert.ToInt32(_httpContextAccessor.HttpContext.User.Claims.Where(c => c.Type == "PatientId").Select(c => c.Value).SingleOrDefault());
+           // int patientId = Convert.ToInt32(_httpContextAccessor.HttpContext.User.Claims.Where(c => c.Type == "PatientId").Select(c => c.Value).SingleOrDefault());
             var activeUser = _userService.GetById(userId);
-            var patient = _patientService.GetById(patientId);
+            var patient = _patientService.GetById(userId);
             _activePatient.UserId = activeUser.Id;
             _activePatient.Tcno = activeUser.Tcno;
             _activePatient.RolId = activeUser.RolId;
@@ -38,7 +38,6 @@ namespace HospitalAppointment.UI.Tools.ActiveUserContext
             _activePatient.BirthDate = activeUser.BirthDate;
             _activePatient.Telephone = activeUser.Telephone;
             _activePatient.Gender = activeUser.Gender;
-            _activePatient.PatientId = patient.Id;
             _activePatient.AnaAdi = patient.AnaAdi;
             _activePatient.BabaAdi = patient.BabaAdi;
             return _activePatient;

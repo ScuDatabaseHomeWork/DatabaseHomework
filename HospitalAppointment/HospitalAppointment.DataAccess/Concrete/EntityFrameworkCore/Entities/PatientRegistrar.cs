@@ -19,15 +19,14 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities
         [Key]
         public int Id { get; set; }
         public int TellerNumber { get; set; }
-        public int UserId { get; set; }
         public int SuperAdminId { get; set; }
 
+        [ForeignKey(nameof(Id))]
+        [InverseProperty(nameof(User.PatientRegistrar))]
+        public virtual User IdNavigation { get; set; }
         [ForeignKey(nameof(SuperAdminId))]
         [InverseProperty("PatientRegistrars")]
         public virtual SuperAdmin SuperAdmin { get; set; }
-        [ForeignKey(nameof(UserId))]
-        [InverseProperty("PatientRegistrars")]
-        public virtual User User { get; set; }
         [InverseProperty(nameof(Appointment.Registrar))]
         public virtual ICollection<Appointment> Appointments { get; set; }
     }

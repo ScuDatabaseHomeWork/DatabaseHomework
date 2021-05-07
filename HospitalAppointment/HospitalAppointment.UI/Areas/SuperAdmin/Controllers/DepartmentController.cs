@@ -31,7 +31,7 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
         public IActionResult Index()
         {
             TempData["ActiveSuperAdmin"] = _activeSuperAdmin.GetActiveSuperAdmin();
-            var departments = _mapper.Map<List<DepartmentListDto>>(_departmentService.GetWithDepartments());
+            var departments = _mapper.Map<List<DepartmentListDto>>(_departmentService.GetWithPoliclinics());
             return View(departments);
         }
         public IActionResult CreateDepartment()

@@ -10,7 +10,7 @@
             <h5>Bölüm Seçme Sayfası</h5>
         </div>
         <div class="card-block">
-            <form class="form-material" asp-action="SelectingDoctor" >
+            <form class="form-material" asp-action="SelectingDoctor" method="post" >
                 <input type="hidden" asp-for="UserId" value="@Model.UserId"/>
                 <input type="hidden" asp-for="Name" value="@Model.Name"/>
                 <input type="hidden" asp-for="SurName" value="@Model.SurName"/>

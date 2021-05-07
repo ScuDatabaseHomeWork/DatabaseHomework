@@ -9,5 +9,8 @@ namespace HospitalAppointment.Business.Interfaces
     {
         List<DateTime> GetAppointmentsHourTimesByAppointmentDayAndDoctorId(DateTime day, int doctorId);
         List<Appointment> GetPatientRegistrarAppointmentsWithAllTables(int id);
+        List<Appointment> GetPatientPastAppointmentsByPatientId(int id);
+        List<Appointment> GetPatientFutureAppointmentsByPatientId(int id);
+        List<Appointment> GetTodayAppointmentsByDoctorId(int id);
     }
 }

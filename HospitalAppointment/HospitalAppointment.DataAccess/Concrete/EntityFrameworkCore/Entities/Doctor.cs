@@ -24,18 +24,17 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities
         [Required]
         [StringLength(50)]
         public string Apellation { get; set; }
-        public int UserId { get; set; }
         public int SuperAdminId { get; set; }
 
         [ForeignKey(nameof(DepartmentId))]
         [InverseProperty("Doctors")]
         public virtual Department Department { get; set; }
+        [ForeignKey(nameof(Id))]
+        [InverseProperty(nameof(User.Doctor))]
+        public virtual User IdNavigation { get; set; }
         [ForeignKey(nameof(SuperAdminId))]
         [InverseProperty("Doctors")]
         public virtual SuperAdmin SuperAdmin { get; set; }
-        [ForeignKey(nameof(UserId))]
-        [InverseProperty("Doctors")]
-        public virtual User User { get; set; }
         [InverseProperty("IdNavigation")]
         public virtual Policlinic Policlinic { get; set; }
         [InverseProperty(nameof(Appointment.Doctor))]

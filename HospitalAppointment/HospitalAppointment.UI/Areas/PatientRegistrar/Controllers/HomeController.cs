@@ -27,9 +27,17 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
         public IActionResult Index()
         {
             TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
-            var patientRegistrarAppointments = _mapper.Map<List<AppointmentsOfPatientRegistrar>>(_appointmentService.GetPatientRegistrarAppointmentsWithAllTables(_activePatientRegistrar
-                .GetActivePatientRegistrar().PatientRegistrarId));
+            var patientRegistrarAppointments = _mapper.Map<List<AppointmentsOfPatientRegistrar>>(_appointmentService
+                .GetPatientRegistrarAppointmentsWithAllTables(_activePatientRegistrar
+                .GetActivePatientRegistrar().UserId));
             return View(patientRegistrarAppointments);
+        }
+
+        public IActionResult MyProfil()
+        {
+            TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+            var activePatientRegistrar = _activePatientRegistrar.GetActivePatientRegistrar();
+            return View(activePatientRegistrar);
         }
     }
 }

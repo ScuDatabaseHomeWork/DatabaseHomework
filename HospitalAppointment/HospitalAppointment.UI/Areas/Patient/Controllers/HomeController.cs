@@ -25,5 +25,11 @@ namespace HospitalAppointment.UI.Areas.Patient.Controllers
             TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
             return View();
         }
+
+        public IActionResult MyProfile()
+        {
+            TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
+            return View();
+        }
     }
 }

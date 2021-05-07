@@ -11,7 +11,7 @@ namespace HospitalAppointment.DTO.DTOs.Appointment
         public string SurName { get; set; }
         public int DepartmentId { get; set; }
         public string DepartmentName { get; set; }
-        public int DoctorId { get; set; }
+        //public int DoctorId { get; set; }
         public int PoliclinicId { get; set; }
         public string PoliclinicName { get; set; }
         public int DoctorUserId { get; set; }
