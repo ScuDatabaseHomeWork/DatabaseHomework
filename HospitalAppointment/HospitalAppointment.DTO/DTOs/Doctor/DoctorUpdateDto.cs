@@ -7,7 +7,7 @@ namespace HospitalAppointment.DTO.DTOs.Doctor
     public class DoctorUpdateDto
     {
         public int Id { get; set; }
-        public long TCNo { get; set; }
+        public long Tcno { get; set; }
         public int RolId { get; set; }
         public string Name { get; set; }
         public string SurName { get; set; }

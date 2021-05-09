@@ -76,5 +76,42 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
             _userService.Remove(_userService.GetById(id));
             return true;
         }
+
+
+        public IActionResult UpdatePatientRegistrar(int patientRegistrarId)
+        {
+            TempData["ActiveSuperAdmin"] = _activeSuperAdmin.GetActiveSuperAdmin();
+            var patientRegistrarUpdateDto =
+                _mapper.Map<PatientRegistrarUpdateDto>(
+                    _patientRegistrarService.GetPatientRegistrarWithAllTablesByUserId(patientRegistrarId));
+            return View(patientRegistrarUpdateDto);
+        }
+
+        [HttpPost]
+        public IActionResult UpdatePatientRegistrar(PatientRegistrarUpdateDto patientRegistrarUpdateDto)
+        {
+            var patientRegistrarUser = new DataAccess.Concrete.EntityFrameworkCore.Entities.User()
+            {
+                Id = patientRegistrarUpdateDto.Id,
+                Tcno = patientRegistrarUpdateDto.Tcno,
+                RolId = patientRegistrarUpdateDto.RolId,
+                Name = patientRegistrarUpdateDto.Name,
+                SurName = patientRegistrarUpdateDto.SurName,
+                Email = patientRegistrarUpdateDto.Email,
+                BirthDate = patientRegistrarUpdateDto.BirthDate,
+                Telephone = patientRegistrarUpdateDto.Telephone,
+                Gender = patientRegistrarUpdateDto.Gender,
+                Password = patientRegistrarUpdateDto.Password
+            };
+            var patientRegistrar = new DataAccess.Concrete.EntityFrameworkCore.Entities.PatientRegistrar()
+            {
+                Id = patientRegistrarUpdateDto.Id,
+                TellerNumber = patientRegistrarUpdateDto.PatientRegistrar.TellerNumber,
+                SuperAdminId = patientRegistrarUpdateDto.PatientRegistrar.SuperAdminId
+            };
+            _userService.Update(patientRegistrarUser);
+            _patientRegistrarService.Update(patientRegistrar);
+            return RedirectToAction("Index", "PatientRegistrar");
+        }
     }
 }

@@ -53,8 +53,8 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
             var patient = new DataAccess.Concrete.EntityFrameworkCore.Entities.Patient()
             {
                 Id = userId,
-                AnaAdi = patientAddDto.AnaAdi,
-                BabaAdi = patientAddDto.BabaAdi,
+                MotherName = patientAddDto.MotherName,
+                FatherName = patientAddDto.FatherName,
                 SuperAdminId = 3008
             };
             _patientService.Add(patient);

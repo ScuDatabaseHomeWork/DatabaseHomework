@@ -22,10 +22,10 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities
         public int Id { get; set; }
         [Required]
         [StringLength(50)]
-        public string AnaAdi { get; set; }
+        public string MotherName { get; set; }
         [Required]
         [StringLength(50)]
-        public string BabaAdi { get; set; }
+        public string FatherName { get; set; }
         public int SuperAdminId { get; set; }
 
         [ForeignKey(nameof(Id))]

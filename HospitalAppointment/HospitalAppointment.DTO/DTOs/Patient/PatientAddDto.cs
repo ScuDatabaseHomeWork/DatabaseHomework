@@ -16,8 +16,8 @@ namespace HospitalAppointment.DTO.DTOs.Patient
         public bool Gender { get; set; }
         public string Password { get; set; }
 
-        public string AnaAdi { get; set; }
-        public string BabaAdi { get; set; }
+        public string MotherName { get; set; }
+        public string FatherName { get; set; }
 
     }
 }

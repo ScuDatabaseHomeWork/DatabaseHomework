@@ -92,10 +92,45 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
 
         public IActionResult UpdateDoctor(int doctorId)
         {
-            //DoctorUpdateDto doctorUpdateDto;
             TempData["ActiveSuperAdmin"] = _activeSuperAdmin.GetActiveSuperAdmin();
             var doctorUpdateDto = _mapper.Map<DoctorUpdateDto>(_doctorService.GetDoctorWithAllTablesByUserId(doctorId));
-            return View();
+            ViewBag.Departments = new SelectList(_departmentService.GetAll(), "Id", "DepartmanName",doctorUpdateDto.Doctor.DepartmentId);
+            return View(doctorUpdateDto);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateDoctor(DoctorUpdateDto doctorUpdateDto)
+        {
+            var doctorUser = new DataAccess.Concrete.EntityFrameworkCore.Entities.User()
+            {
+                Id = doctorUpdateDto.Id,
+                Tcno = doctorUpdateDto.Tcno,
+                RolId = doctorUpdateDto.RolId,
+                Name = doctorUpdateDto.Name,
+                SurName = doctorUpdateDto.SurName,
+                Email = doctorUpdateDto.Email,
+                BirthDate = doctorUpdateDto.BirthDate,
+                Telephone = doctorUpdateDto.Telephone,
+                Gender = doctorUpdateDto.Gender,
+                Password = doctorUpdateDto.Password
+            };
+            var doctor = new DataAccess.Concrete.EntityFrameworkCore.Entities.Doctor()
+            {
+                Id = doctorUpdateDto.Id,
+                DepartmentId = doctorUpdateDto.Doctor.DepartmentId,
+                Apellation = doctorUpdateDto.Doctor.Apellation,
+                SuperAdminId = doctorUpdateDto.Doctor.SuperAdminId
+            };
+            var policlinic = new Policlinic()
+            {
+                Id = doctorUpdateDto.Id,
+                PoliclinicName = doctorUpdateDto.Doctor.Policlinic.PoliclinicName,
+                DepartmentId = doctorUpdateDto.Doctor.DepartmentId
+            };
+            _userService.Update(doctorUser);
+            _doctorService.Update(doctor);
+            _policlinicService.Update(policlinic);
+            return RedirectToAction("Index", "Doctor");
         }
     }
 }

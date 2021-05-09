@@ -61,8 +61,8 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
             var patient = new DataAccess.Concrete.EntityFrameworkCore.Entities.Patient()
             {
                 Id = userId,
-                AnaAdi = patientAddDto.AnaAdi,
-                BabaAdi = patientAddDto.BabaAdi,
+                MotherName = patientAddDto.MotherName,
+                FatherName = patientAddDto.FatherName,
                 SuperAdminId = _activeSuperAdmin.GetActiveSuperAdmin().UserId
             };
             _patientService.Add(patient);

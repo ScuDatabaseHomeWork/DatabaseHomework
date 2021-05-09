@@ -22,10 +22,10 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             return _context.Users.Where(I => I.Rol.RolName == "PatientRegistrar").Include(I => I.PatientRegistrar).ToList();
         }
 
-        public PatientRegistrar GetPatientRegistrarByUserId(int id)
+        public User GetPatientRegistrarWithAllTablesByUserId(int id)
         {
-            //return _context.PatientRegistrars.FirstOrDefault(I => I.UserId == id);
-            return null;
+           return _context.Users.Include(I => I.PatientRegistrar).FirstOrDefault(I => I.Id == id);
+           
         }
     }
 }

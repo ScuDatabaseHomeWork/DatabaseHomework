@@ -20,9 +20,11 @@ namespace HospitalAppointment.Business.Concrete
             return _patientRegistrarDal.GetPatientRegistrarsWithAllTables();
         }
 
-        public PatientRegistrar GetPatientRegistrarByUserId(int id)
+        public User GetPatientRegistrarWithAllTablesByUserId(int id)
         {
-            return _patientRegistrarDal.GetPatientRegistrarByUserId(id);
+            return _patientRegistrarDal.GetPatientRegistrarWithAllTablesByUserId(id);
         }
+
+       
     }
 }

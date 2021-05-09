@@ -40,7 +40,9 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
 
         public User GetDoctorWithAllTablesByUserId(int id)
         {
-            return _context.Users.Include(I => I.Doctor).ThenInclude(I=>I.Policlinic).FirstOrDefault(I => I.Id == id);
+            return _context.Users.Include(I => I.Doctor)
+                .ThenInclude(I=>I.Policlinic)
+                .FirstOrDefault(I => I.Id == id);
 
         }
 

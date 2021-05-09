@@ -34,7 +34,7 @@
                                 <td>@patientRegistrarUser.Telephone</td>
                                 <td>@patientRegistrarUser.Email</td>
                                 <td>@patientRegistrarUser.PatientRegistrar.TellerNumber</td>
-                                <td><a class="btn btn-sm btn-success">Düzenle</a></td>
+                                <td><a class="btn btn-sm btn-success" asp-action="UpdatePatientRegistrar" asp-route-patientRegistrarId="@patientRegistrarUser.Id">Düzenle</a></td>
                                 <td><a class="btn btn-sm btn-danger openModal" data-modid="@patientRegistrarUser.Id" data-modtitle="@patientRegistrarUser.Name" data-toggle="modal" href="#myModal">Sil</a></td>
                             </tr>
                         }

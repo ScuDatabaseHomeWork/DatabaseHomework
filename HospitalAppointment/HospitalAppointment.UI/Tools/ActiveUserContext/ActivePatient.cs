@@ -38,8 +38,8 @@ namespace HospitalAppointment.UI.Tools.ActiveUserContext
             _activePatient.BirthDate = activeUser.BirthDate;
             _activePatient.Telephone = activeUser.Telephone;
             _activePatient.Gender = activeUser.Gender;
-            _activePatient.AnaAdi = patient.AnaAdi;
-            _activePatient.BabaAdi = patient.BabaAdi;
+            _activePatient.MotherName = patient.MotherName;
+            _activePatient.FatherName = patient.FatherName;
             return _activePatient;
         }
 
