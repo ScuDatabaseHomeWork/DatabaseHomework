@@ -43,6 +43,8 @@ namespace HospitalAppointment.UI.Mapping.AutoMapperProfile
             CreateMap<BlackListListDto, BlackList>();
             CreateMap<BlackList, BlackListUpdateDto>();
             CreateMap<BlackListUpdateDto, BlackList>();
+            CreateMap<BlackList, BlackListOfPatientDto>();
+            CreateMap<BlackListOfPatientDto, BlackList>();
             #endregion
 
             #region Department-DepartmentDto
@@ -61,8 +63,8 @@ namespace HospitalAppointment.UI.Mapping.AutoMapperProfile
             CreateMap<DoctorAddDto, Doctor>();
             CreateMap<User, DoctorListDto>();
             CreateMap<DoctorListDto, User>();
-            CreateMap<Doctor, DoctorUpdateDto>();
-            CreateMap<DoctorUpdateDto, Doctor>();
+            CreateMap<User, DoctorUpdateDto>();
+            CreateMap<DoctorUpdateDto, User>();
             #endregion
 
             #region Patient-PatientDto
@@ -101,6 +103,8 @@ namespace HospitalAppointment.UI.Mapping.AutoMapperProfile
             CreateMap<PrescribeListDto, Prescribe>();
             CreateMap<Prescribe, PrescribeUpdateDto>();
             CreateMap<PrescribeUpdateDto, Prescribe>();
+            CreateMap<Prescribe, PrescribeOfPatientDto>();
+            CreateMap<PrescribeOfPatientDto, Prescribe>();
             #endregion
 
             #region Rol-RolDto

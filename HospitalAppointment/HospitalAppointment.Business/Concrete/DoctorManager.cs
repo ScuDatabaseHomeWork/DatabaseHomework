@@ -25,9 +25,14 @@ namespace HospitalAppointment.Business.Concrete
             return _doctorDal.GetDepartmentDoctorsByDepartmentId(id);
         }
 
-        public Doctor GetDoctorByUserId(int id)
+        public User GetDoctorWithAllTablesByUserId(int id)
         {
-            return _doctorDal.GetDoctorByUserId(id);
+            return _doctorDal.GetDoctorWithAllTablesByUserId(id);
+        }
+
+        public void DeleteDoctorWithPoliclinicByDoctorId(int id)
+        {
+            _doctorDal.DeleteDoctorWithPoliclinicByDoctorId(id);
         }
     }
 }

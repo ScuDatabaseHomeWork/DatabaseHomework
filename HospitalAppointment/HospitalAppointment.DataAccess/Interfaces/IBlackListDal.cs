@@ -7,6 +7,7 @@ namespace HospitalAppointment.DataAccess.Interfaces
 {
     public interface IBlackListDal:IGenericDal<BlackList>
     {
-
+        List<BlackList> GetPatientBlackListsByPatientId(int id);
+        bool CheckInBlackListByPatientId(int id);
     }
 }

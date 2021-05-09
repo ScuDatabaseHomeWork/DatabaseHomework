@@ -7,6 +7,6 @@ namespace HospitalAppointment.DataAccess.Interfaces
 {
     public interface IPrescribeDal:IGenericDal<Prescribe>
     {
-
+        List<Prescribe> GetPatientPrescribeByPatientId(int id);
     }
 }

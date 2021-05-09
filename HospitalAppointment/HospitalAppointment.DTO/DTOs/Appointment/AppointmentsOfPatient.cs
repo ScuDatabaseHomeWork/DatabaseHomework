@@ -9,5 +9,6 @@ namespace HospitalAppointment.DTO.DTOs.Appointment
         public DateTime Date { get; set; }
         public DataAccess.Concrete.EntityFrameworkCore.Entities.PatientRegistrar Registrar { get; set; }
         public DataAccess.Concrete.EntityFrameworkCore.Entities.Doctor Doctor { get; set; }
+        public DataAccess.Concrete.EntityFrameworkCore.Entities.Patient Patient { get; set; }
     }
 }

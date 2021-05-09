@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model List<HospitalAppointment.DTO.DTOs.BlackList.BlackListOfPatientDto>
+
+@if (Model.Count != 0)
+{
+    <div class="card">
+        <div class="card-header">
+            <h5>Doktorlar Departmanları Ve Poliklinikleri</h5>
+            @*<div class="card-header-right">
+                    <a class="btn btn-secondary" asp-action="CreateDoctor">Yeni Doktor</a>
+                </div>*@
+        </div>
+        <div class="card-block table-border-style">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Karaliste Zaman Aşımı</th>
+                            <th>Açıklama</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var blackList in Model)
+                        {
+                            <tr>
+                                <td>@blackList.DeceptionCount.ToShortDateString()</td>
+                                <td>@blackList.Description</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <h1>Kayıt Yok</h1>
+}

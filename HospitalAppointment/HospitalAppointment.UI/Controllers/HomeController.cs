@@ -91,7 +91,7 @@ namespace HospitalAppointment.UI.Controllers
             return RedirectToAction("Index", "Home", new { area = areaPath });
         }
 
-        [HttpPost]
+       
         public IActionResult LogOut()
         {
             HttpContext.SignOutAsync();

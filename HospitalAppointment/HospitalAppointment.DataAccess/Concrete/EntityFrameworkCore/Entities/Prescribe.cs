@@ -21,6 +21,8 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities
         public string Medicine { get; set; }
         public int DoctorId { get; set; }
         public int PatientId { get; set; }
+        [Required]
+        [StringLength(500)]
         public string Description { get; set; }
 
         [ForeignKey(nameof(DoctorId))]

@@ -39,5 +39,10 @@ namespace HospitalAppointment.Business.Concrete
         {
             return _appointmentDal.GetTodayAppointmentsByDoctorId(id);
         }
+
+        public void RemoveAppointmentByDateAndDoctorId(DateTime appointmentDateTime, int patientId)
+        {
+            _appointmentDal.RemoveAppointmentByDateAndDoctorId(appointmentDateTime,patientId);
+        }
     }
 }

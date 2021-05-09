@@ -4,21 +4,47 @@
 }
 @model HospitalAppointment.DTO.DTOs.Department.DepartmentAddDto
 
-<div class="col-md-10 container-fluid">
+
+<div class="col-sm-10 container-fluid">
+    <!-- Basic Form Inputs card start -->
     <div class="card">
         <div class="card-header">
             <h5>Departman Ekleme Sayfası</h5>
         </div>
         <div class="card-block">
-            <form class="form-material" asp-action="CreateDepartment" method="post">
-                <div class="form-group form-default">
-                    <input type="text" class="form-control" required="" asp-for="DepartmanName">
-                    <span class="form-bar"></span>
-                    <label class="float-label">Departman Adı</label>
+            <form asp-action="CreateDepartment" method="post">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Ad</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" required="" asp-for="DepartmanName" placeholder="Departman adını giriniz">
+                    </div>
                 </div>
-                <br/>
+                <br />
                 <button type="submit" class="btn waves-effect waves-light btn-primary"><i class="icofont icofont-check-circled"></i>Kaydet</button>
             </form>
         </div>
     </div>
+
 </div>
+
+
+
+
+@*<div class="col-md-10 container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <h5>Departman Ekleme Sayfası</h5>
+            </div>
+            <div class="card-block">
+                <form class="form-material" asp-action="CreateDepartment" method="post">
+                    <div class="form-group form-default">
+                        <input type="text" class="form-control" required="" asp-for="DepartmanName">
+                        <span class="form-bar"></span>
+                        <label class="float-label">Departman Adı</label>
+                    </div>
+                    <br/>
+                    <button type="submit" class="btn waves-effect waves-light btn-primary"><i class="icofont icofont-check-circled"></i>Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>*@

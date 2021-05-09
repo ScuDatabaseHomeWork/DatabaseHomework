@@ -9,6 +9,7 @@ namespace HospitalAppointment.DataAccess.Interfaces
     {
         List<User> GetDoctorsWithAllTables();
         List<User> GetDepartmentDoctorsByDepartmentId(int id);
-        Doctor GetDoctorByUserId(int id);
+        User GetDoctorWithAllTablesByUserId(int id);
+        void DeleteDoctorWithPoliclinicByDoctorId(int id);
     }
 }

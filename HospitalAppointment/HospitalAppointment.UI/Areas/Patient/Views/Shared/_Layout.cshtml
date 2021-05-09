@@ -83,8 +83,8 @@
                                 </a>
                                 <ul class="show-notification profile-notification">
                                     <li class="waves-effect waves-light">
-                                        <a href="auth-normal-sign-in.html">
-                                            <i class="ti-layout-sidebar-left"></i> Logout
+                                        <a asp-action="LogOut" asp-controller="Home" asp-area="">
+                                            <i class="ti-layout-sidebar-left"></i> Çıkış Yap
                                         </a>
                                     </li>
                                 </ul>
@@ -133,10 +133,20 @@
                                     </a>
                                 </li>
                             </ul>
+                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Reçete Menü</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a class="waves-effect waves-dark" asp-action="Index" asp-controller="Prescribe">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Reçetelerim</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
                             <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Karaliste Menü</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="MyProfil" asp-controller="Home">
+                                    <a class="waves-effect waves-dark" asp-action="Index" asp-controller="BlackList">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.dash.main">Karalistelerim</span>
                                         <span class="pcoded-mcaret"></span>

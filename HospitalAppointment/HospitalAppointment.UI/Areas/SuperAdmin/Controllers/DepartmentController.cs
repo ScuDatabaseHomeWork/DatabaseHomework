@@ -48,6 +48,11 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-      
+        [HttpPost]
+        public bool RemoveDepartment(int id)
+        {
+            _departmentService.Remove(_departmentService.GetById(id));
+            return true;
+        }
     }
 }

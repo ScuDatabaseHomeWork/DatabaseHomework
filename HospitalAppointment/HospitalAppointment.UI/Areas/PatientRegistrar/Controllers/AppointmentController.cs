@@ -24,7 +24,8 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
         private readonly IMapper _mapper;
         private readonly IUserService _userService;
         private readonly IAppointmentService _appointmentService;
-        public AppointmentController(IAppointmentService appointmentService,IMapper mapper, IPoliclinicService policlinicService, IDoctorService doctorService, IDepartmentService departmentService, IPatientService patientService, IHttpContextAccessor httpContextAccessor, IUserService userService, IPatientRegistrarService patientRegistrarService)
+        private readonly IBlackListService _blackListService;
+        public AppointmentController(IBlackListService blackListService, IAppointmentService appointmentService, IMapper mapper, IPoliclinicService policlinicService, IDoctorService doctorService, IDepartmentService departmentService, IPatientService patientService, IHttpContextAccessor httpContextAccessor, IUserService userService, IPatientRegistrarService patientRegistrarService)
         {
             _activePatientRegistrar = new ActivePatientRegistrar(httpContextAccessor, userService, patientRegistrarService);
             _patientService = patientService;
@@ -34,6 +35,13 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
             _mapper = mapper;
             _userService = userService;
             _appointmentService = appointmentService;
+            _blackListService = blackListService;
+        }
+
+        public IActionResult PatientInBlackList()
+        {
+            TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+            return View();
         }
         public IActionResult SelectingPatient()
         {
@@ -47,13 +55,20 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
             var checkedPatientUser = _patientService.CheckAndGetPatientByTcNo(tc);
             if (checkedPatientUser != null)
             {
-                var appointmentUserDto = new AppointmentUserDto()
+                if (_blackListService.CheckInBlackListByPatientId(checkedPatientUser.Id))
                 {
-                    UserId = checkedPatientUser.Id,
-                    Name = checkedPatientUser.Name,
-                    SurName = checkedPatientUser.SurName,
-                };
-                return RedirectToAction("SelectingDepartment", appointmentUserDto);
+                    var appointmentUserDto = new AppointmentUserDto()
+                    {
+                        UserId = checkedPatientUser.Id,
+                        Name = checkedPatientUser.Name,
+                        SurName = checkedPatientUser.SurName,
+                    };
+                    return RedirectToAction("SelectingDepartment", appointmentUserDto);
+                }
+                else
+                {
+                    return RedirectToAction("PatientInBlackList");
+                }
             }
             else
             {
@@ -71,7 +86,7 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
             return View(appointmentUserDto);
         }
 
-     
+
         [HttpPost]
         public IActionResult SelectingDoctor(AppointmentUserDto appointmentUserDto)
         {
@@ -87,17 +102,17 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
             TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
             var appointmentDoctorUser = _userService.GetById(appointmentUserDto.DoctorUserId);
             appointmentUserDto.DoctorUserName = appointmentDoctorUser.Name;
-          //  var appointmentDoctor = _doctorService.GetDoctorByUserId(appointmentDoctorUser.Id);
-           // appointmentUserDto.DoctorId = appointmentDoctor.Id;
+            //  var appointmentDoctor = _doctorService.GetDoctorByUserId(appointmentDoctorUser.Id);
+            // appointmentUserDto.DoctorId = appointmentDoctor.Id;
             var doctorPoliclinic = _policlinicService.GetById(appointmentUserDto.DoctorUserId);
             appointmentUserDto.PoliclinicId = doctorPoliclinic.Id;
             appointmentUserDto.PoliclinicName = doctorPoliclinic.PoliclinicName;
             List<DateTime> dateDays = new List<DateTime>();
-       
+
             int i = 1;
             while (true)
             {
-                if (DateTime.Today.AddDays(i).DayOfWeek != DayOfWeek.Saturday && DateTime.Today.AddDays(i).DayOfWeek != DayOfWeek.Sunday )
+                if (DateTime.Today.AddDays(i).DayOfWeek != DayOfWeek.Saturday && DateTime.Today.AddDays(i).DayOfWeek != DayOfWeek.Sunday)
                 {
                     dateDays.Add(DateTime.Today.AddDays(i));
                 }
@@ -117,7 +132,7 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
         {
             TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
             List<DateTime> existDateHourTimes =
-                _appointmentService.GetAppointmentsHourTimesByAppointmentDayAndDoctorId(appointmentUserDto.AppointmentDateTime,appointmentUserDto.DoctorUserId);
+                _appointmentService.GetAppointmentsHourTimesByAppointmentDayAndDoctorId(appointmentUserDto.AppointmentDateTime, appointmentUserDto.DoctorUserId);
             ViewBag.existDateHourTimes = existDateHourTimes;
             return View(appointmentUserDto);
         }
@@ -133,7 +148,7 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
         [HttpPost]
         public IActionResult CreateAppointment(AppointmentUserDto appointmentUserDto)
         {
-           
+
             Appointment appointment = new Appointment()
             {
                 DoctorId = appointmentUserDto.DoctorUserId,

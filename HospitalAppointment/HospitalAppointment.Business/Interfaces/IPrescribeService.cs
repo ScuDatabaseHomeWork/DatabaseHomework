@@ -7,5 +7,6 @@ namespace HospitalAppointment.Business.Interfaces
 {
     public interface IPrescribeService:IGenericService<Prescribe>
     {
+        List<Prescribe> GetPatientPrescribeByPatientId(int id);
     }
 }

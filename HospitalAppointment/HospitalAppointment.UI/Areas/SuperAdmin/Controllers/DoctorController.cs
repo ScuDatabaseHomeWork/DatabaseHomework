@@ -83,7 +83,19 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public bool RemoveDoctor(int id)
+        {
+            _doctorService.DeleteDoctorWithPoliclinicByDoctorId(id);
+            return true;
+        }
 
-
+        public IActionResult UpdateDoctor(int doctorId)
+        {
+            //DoctorUpdateDto doctorUpdateDto;
+            TempData["ActiveSuperAdmin"] = _activeSuperAdmin.GetActiveSuperAdmin();
+            var doctorUpdateDto = _mapper.Map<DoctorUpdateDto>(_doctorService.GetDoctorWithAllTablesByUserId(doctorId));
+            return View();
+        }
     }
 }

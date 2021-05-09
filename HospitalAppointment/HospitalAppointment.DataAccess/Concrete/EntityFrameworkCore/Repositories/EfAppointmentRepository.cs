@@ -52,6 +52,7 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             return _context.Appointments
                 .Include(I => I.Doctor)
                 .Include(I => I.Registrar)
+                .Include(I=>I.Patient)
                 .Where(I => I.PatientId == id).Where(I => I.Date > DateTime.Now)
                 .ToList();
         }
@@ -72,6 +73,14 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
                 }
             }
             return todayDoctorAppointments;
+        }
+
+        public void RemoveAppointmentByDateAndDoctorId(DateTime appointmentDateTime, int patientId)
+        {
+            var appointments = _context.Appointments.Where(I => I.PatientId == patientId).ToList();
+            var appointment = appointments.FirstOrDefault(I => I.Date == appointmentDateTime);
+            _context.Appointments.Remove(appointment);
+            _context.SaveChanges();
         }
     }
 }

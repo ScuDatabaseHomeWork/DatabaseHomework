@@ -7,10 +7,17 @@ using HospitalAppointment.DataAccess.Interfaces;
 
 namespace HospitalAppointment.Business.Concrete
 {
-    public class PrescribeManager:GenericManager<Prescribe>,IPrescribeService
+    public class PrescribeManager : GenericManager<Prescribe>, IPrescribeService
     {
-        public PrescribeManager(IGenericDal<Prescribe> genericDal) : base(genericDal)
+        private readonly IPrescribeDal _prescribeDal;
+        public PrescribeManager(IGenericDal<Prescribe> genericDal, IPrescribeDal prescribeDal) : base(genericDal)
         {
+            _prescribeDal = prescribeDal;
+        }
+
+        public List<Prescribe> GetPatientPrescribeByPatientId(int id)
+        {
+            return _prescribeDal.GetPatientPrescribeByPatientId(id);
         }
     }
 }

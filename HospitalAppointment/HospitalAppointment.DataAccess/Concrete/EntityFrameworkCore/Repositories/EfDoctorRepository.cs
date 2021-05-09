@@ -38,10 +38,21 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
 
         }
 
-        public Doctor GetDoctorByUserId(int id)
+        public User GetDoctorWithAllTablesByUserId(int id)
         {
-            //return _context.Doctors.FirstOrDefault(I => I.UserId == id);
-            return null;
+            return _context.Users.Include(I => I.Doctor).ThenInclude(I=>I.Policlinic).FirstOrDefault(I => I.Id == id);
+
         }
+
+        public void DeleteDoctorWithPoliclinicByDoctorId(int id)
+        {
+            var doctorPoliclinic = _context.Policlinics.FirstOrDefault(I => I.Id == id);
+            _context.Policlinics.Remove(doctorPoliclinic);
+            var doctorUser = _context.Users.FirstOrDefault(I => I.Id == id);
+            _context.Users.Remove(doctorUser);
+            _context.SaveChanges();
+        }
+
+
     }
 }

@@ -9,8 +9,20 @@ namespace HospitalAppointment.Business.Concrete
 {
     public class BlackListManager:GenericManager<BlackList>,IBlackListService
     {
-        public BlackListManager(IGenericDal<BlackList> genericDal) : base(genericDal)
+        private readonly IBlackListDal _blackListDal;
+        public BlackListManager(IGenericDal<BlackList> genericDal,IBlackListDal blackListDal) : base(genericDal)
         {
+            _blackListDal = blackListDal;
+        }
+
+        public List<BlackList> GetPatientBlackListsByPatientId(int id)
+        {
+            return _blackListDal.GetPatientBlackListsByPatientId(id);
+        }
+
+        public bool CheckInBlackListByPatientId(int id)
+        {
+            return _blackListDal.CheckInBlackListByPatientId(id);
         }
     }
 }

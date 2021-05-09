@@ -10,6 +10,7 @@ using HospitalAppointment.DTO.DTOs.Appointment;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace HospitalAppointment.UI.Areas.Patient.Controllers
 {
@@ -23,7 +24,8 @@ namespace HospitalAppointment.UI.Areas.Patient.Controllers
         private readonly IDoctorService _doctorService;
         private readonly IUserService _userService;
         private readonly IPoliclinicService _policlinicService;
-        public AppointmentController(IPoliclinicService policlinicService,IDoctorService doctorService,IDepartmentService departmentService,IAppointmentService appointmentService,IMapper mapper, IHttpContextAccessor httpContextAccessor, IUserService userService, IPatientService patientService)
+        private readonly IBlackListService _blackListService;
+        public AppointmentController(IBlackListService blackListService, IPoliclinicService policlinicService, IDoctorService doctorService, IDepartmentService departmentService, IAppointmentService appointmentService, IMapper mapper, IHttpContextAccessor httpContextAccessor, IUserService userService, IPatientService patientService)
         {
             _activePatient = new ActivePatient(httpContextAccessor, userService, patientService);
             _mapper = mapper;
@@ -32,6 +34,7 @@ namespace HospitalAppointment.UI.Areas.Patient.Controllers
             _doctorService = doctorService;
             _userService = userService;
             _policlinicService = policlinicService;
+            _blackListService = blackListService;
         }
 
         public IActionResult PastAppointments()
@@ -50,18 +53,26 @@ namespace HospitalAppointment.UI.Areas.Patient.Controllers
             return View(patientFutureAppointments);
         }
 
-
+        public IActionResult PatientInBlackList()
+        {
+            TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
+            return View();
+        }
         public IActionResult SelectingDepartment()
         {
-            var appointmentUserDto = new AppointmentUserDto()
+            if (_blackListService.CheckInBlackListByPatientId(_activePatient.GetActivePatient().UserId))
             {
-                UserId = _activePatient.GetActivePatient().UserId,
-                Name = _activePatient.GetActivePatient().Name,
-                SurName = _activePatient.GetActivePatient().SurName,
-            };
-            TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
-            ViewBag.Departments = new SelectList(_departmentService.GetAll(), "Id", "DepartmanName");
-            return View(appointmentUserDto);
+                var appointmentUserDto = new AppointmentUserDto()
+                {
+                    UserId = _activePatient.GetActivePatient().UserId,
+                    Name = _activePatient.GetActivePatient().Name,
+                    SurName = _activePatient.GetActivePatient().SurName,
+                };
+                TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
+                ViewBag.Departments = new SelectList(_departmentService.GetAll(), "Id", "DepartmanName");
+                return View(appointmentUserDto);
+            }
+            return RedirectToAction("PatientInBlackList");
         }
 
 
@@ -131,6 +142,13 @@ namespace HospitalAppointment.UI.Areas.Patient.Controllers
             };
             _appointmentService.Add(appointment);
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public bool RemoveAppointment(DateTime appointmentDateTime, int patientId)
+        {
+            _appointmentService.RemoveAppointmentByDateAndDoctorId(appointmentDateTime, patientId);
+            return true;
         }
 
     }

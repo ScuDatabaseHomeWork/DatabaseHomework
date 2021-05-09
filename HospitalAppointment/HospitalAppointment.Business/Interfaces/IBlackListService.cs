@@ -7,5 +7,7 @@ namespace HospitalAppointment.Business.Interfaces
 {
     public interface IBlackListService:IGenericService<BlackList>
     {
+        List<BlackList> GetPatientBlackListsByPatientId(int id);
+        bool CheckInBlackListByPatientId(int id);
     }
 }

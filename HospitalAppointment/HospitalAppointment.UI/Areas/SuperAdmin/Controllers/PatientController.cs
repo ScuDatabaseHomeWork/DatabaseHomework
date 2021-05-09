@@ -68,6 +68,13 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
             _patientService.Add(patient);
             return RedirectToAction("Index","Patient");
         }
+
+        [HttpPost]
+        public bool RemovePatient(int id)
+        {
+            _userService.Remove(_userService.GetById(id));
+            return true;
+        }
       
     }
 }

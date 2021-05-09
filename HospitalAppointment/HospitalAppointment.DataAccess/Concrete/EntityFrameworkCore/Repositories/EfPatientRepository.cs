@@ -48,5 +48,7 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             return null;
         }
 
+     
+
     }
 }

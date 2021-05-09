@@ -3,8 +3,10 @@
     ViewData["Title"] = "TodayAppointments";
 }
 
-
-
+@{
+    ActiveDoctorDto activePatient = (ActiveDoctorDto)TempData["ActiveSuperAdmin"];
+}
+@using HospitalAppointment.DTO.DTOs.Doctor
 @using HospitalAppointment.Business.Interfaces
 @inject IUserService UserService
 @model List<HospitalAppointment.DTO.DTOs.Appointment.AppointmentsOfDoctorDto>
@@ -42,6 +44,8 @@
                                 {
                                     <td>Hasta kayıtçı yok</td>
                                 }
+                                <td><a class="btn btn-sm btn-success" asp-controller="Prescribe" asp-action="CreatePrescribe" asp-route-patientId="@appointment.Patient.Id" asp-route-doctorId="@activePatient.UserId">Onayla</a></td>
+                                <td><a class="btn btn-sm btn-warning" asp-controller="BlackList" asp-action="CreateBlackList" asp-route-patientId="@appointment.Patient.Id" asp-route-doctorId="@activePatient.UserId">Gelmedi</a></td>
                             </tr>
                         }
                     </tbody>
