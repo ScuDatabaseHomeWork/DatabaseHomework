@@ -154,7 +154,6 @@ C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppoi
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\bin\Debug\netcoreapp3.1\HospitalAppointment.DTO.pdb
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\PatientLogIn.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\PersonelLogIn.cshtml.g.cs
-C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Home\UserLogIn.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\_ViewImports.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\_ViewStart.cshtml.g.cs
@@ -168,7 +167,6 @@ C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppoi
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Patient\CreatePatient.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\PatientRegistrar\Index.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\PatientRegistrar\CreatePatientRegistrar.cshtml.g.cs
-C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Home\MyProfil.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\_ViewImports.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\_ViewStart.cshtml.g.cs
@@ -185,7 +183,6 @@ C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppoi
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Patient\Views\_ViewStart.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Patient\Views\Home\Index.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Patient\Views\Appointment\SelectingDepartment.cshtml.g.cs
-C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Home\MyProfil.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Patient\Views\Appointment\PastAppointments.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Patient\Views\Appointment\FutureAppointments.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Patient\Views\Home\MyProfile.cshtml.g.cs
@@ -207,3 +204,12 @@ C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppoi
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\PartialDeleteModal.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Doctor\UpdateDoctor.cshtml.g.cs
 C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\PatientRegistrar\UpdatePatientRegistrar.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Patient\UpdatePatient.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Department\UpdateDepartment.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Patient\UpdatePatientForm.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Patient\UpdatePatient.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\PatientRegistrar\Views\Home\MyProfile.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\SuperAdmin\Views\Home\MyProfile.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Doctor\Views\Home\MyProfile.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Error\StatusCode.cshtml.g.cs
+C:\Users\ramazan\source\repos\ScuDatabaseHomeWork\DatabaseHomework\HospitalAppointment\HospitalAppointment.UI\obj\Debug\netcoreapp3.1\Razor\Views\Error\ErrorPage.cshtml.g.cs

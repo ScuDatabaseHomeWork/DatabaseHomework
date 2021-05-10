@@ -7,12 +7,15 @@ using AutoMapper;
 using HospitalAppointment.Business.Interfaces;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities;
 using HospitalAppointment.DTO.DTOs.Patient;
+using HospitalAppointment.UI.StringInfo;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 
 namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
 {
-    [Area("SuperAdmin")]
+    [Authorize(Roles = RoleInfo.SuperAdmin)]
+    [Area(AreaInfo.SuperAdmin)]
     public class PatientController : Controller
     {
         private readonly ActiveSuperAdmin _activeSuperAdmin;
@@ -75,6 +78,44 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
             _userService.Remove(_userService.GetById(id));
             return true;
         }
-      
+
+        public IActionResult UpdatePatient(int patientId)
+        {
+            TempData["ActiveSuperAdmin"] = _activeSuperAdmin.GetActiveSuperAdmin();
+            var patientUpdateDto =
+                _mapper.Map<PatientUpdateDto>(_patientService.GetPatientWithAllTableByUserId(patientId));
+            return View(patientUpdateDto);
+        }
+
+        [HttpPost]
+        public IActionResult UpdatePatient(PatientUpdateDto patientUpdateDto)
+        {
+            var patientUser = new DataAccess.Concrete.EntityFrameworkCore.Entities.User()
+            {
+                Id = patientUpdateDto.Id,
+                Tcno = patientUpdateDto.Tcno,
+                RolId = patientUpdateDto.RolId,
+                Name = patientUpdateDto.Name,
+                SurName = patientUpdateDto.SurName,
+                Email = patientUpdateDto.Email,
+                BirthDate = patientUpdateDto.BirthDate,
+                Telephone = patientUpdateDto.Telephone,
+                Gender = patientUpdateDto.Gender,
+                Password = patientUpdateDto.Password
+            };
+            var patient = new DataAccess.Concrete.EntityFrameworkCore.Entities.Patient()
+            {
+                Id = patientUpdateDto.Id,
+                MotherName = patientUpdateDto.Patient.MotherName,
+                FatherName = patientUpdateDto.Patient.FatherName,
+                SuperAdminId = patientUpdateDto.Patient.SuperAdminId
+            };
+            _userService.Update(patientUser);
+            _patientService.Update(patient);
+            return RedirectToAction("Index", "Patient");
+        }
+
+
+
     }
 }

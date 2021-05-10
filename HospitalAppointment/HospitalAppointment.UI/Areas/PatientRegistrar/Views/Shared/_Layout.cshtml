@@ -1,17 +1,9 @@
-﻿@using System.Security.Claims
-@using HospitalAppointment.Business.Concrete
-@using HospitalAppointment.Business.Interfaces
-@using HospitalAppointment.DTO.DTOs.PatientRegistrar
-@using HospitalAppointment.DTO.DTOs.SuperAdmin
-@using HospitalAppointment.UI.Areas.SuperAdmin.Controllers
-@using HospitalAppointment.UI.Tools.ActiveUserContext
-@using Microsoft.AspNetCore.Http
-@using Microsoft.VisualStudio.Web.CodeGeneration
+﻿@using HospitalAppointment.DTO.DTOs.PatientRegistrar
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Mega Able bootstrap admin template by codedthemes </title>
+    <title>@ViewData["Title"]</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -40,7 +32,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" type="text/css" href="/templates/mega-able-lite/assets/icon/font-awesome/css/font-awesome.min.css">
     <!-- Style.css -->
-    <link rel="stylesheet" type="text/css" href="/templates/mega-able-lite/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/templates/mega-able-lite/assets/customCss/patientRegistrarStyle.css">
     <link rel="stylesheet" type="text/css" href="/templates/mega-able-lite/assets/css/jquery.mCustomScrollbar.css">
     @RenderSection("Csses", false)
 </head>
@@ -48,7 +40,7 @@
 <body>
 
     @{
-        ActivePatientRegistrarDto activePatientRegistrar = (ActivePatientRegistrarDto)TempData["ActiveSuperAdmin"];
+        ActivePatientRegistrarDto activePatientRegistrar = (ActivePatientRegistrarDto)TempData["ActivePatientRegistrar"];
     }
     <!-- Pre-loader start -->
     @await Component.InvokeAsync("PreLoaderComponent")
@@ -116,6 +108,13 @@
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
+                                <li class="">
+                                    <a class="waves-effect waves-dark" asp-action="UpdatePatientForm" asp-controller="Patient">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Hasta Düzenle</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
                             </ul>
                             <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Randevu Menü</div>
                             <ul class="pcoded-item pcoded-left-item">
@@ -137,7 +136,7 @@
                             <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Profil Menü</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="MyProfil" asp-controller="Home">
+                                    <a class="waves-effect waves-dark" asp-action="MyProfile" asp-controller="Home">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.dash.main">Profilim</span>
                                         <span class="pcoded-mcaret"></span>

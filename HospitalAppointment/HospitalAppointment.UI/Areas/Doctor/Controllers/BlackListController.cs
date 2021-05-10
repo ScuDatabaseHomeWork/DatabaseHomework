@@ -7,12 +7,15 @@ using AutoMapper;
 using HospitalAppointment.Business.Interfaces;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities;
 using HospitalAppointment.DTO.DTOs.BlackList;
+using HospitalAppointment.UI.StringInfo;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 
 namespace HospitalAppointment.UI.Areas.Doctor.Controllers
 {
-    [Area("Doctor")]
+    [Authorize(Roles = RoleInfo.Doctor)]
+    [Area(AreaInfo.Doctor)]
     public class BlackListController : Controller
     {
         private ActiveDoctor _activeDoctor;
@@ -26,7 +29,7 @@ namespace HospitalAppointment.UI.Areas.Doctor.Controllers
             _blackListService = blackListService;
             _userService = userService;
         }
-        public IActionResult CreateBlackList(int patientId, int doctorId)
+        public bool CreateBlackList(int patientId, int doctorId)
         {
             var addBlackList = new BlackList()
             {
@@ -36,7 +39,7 @@ namespace HospitalAppointment.UI.Areas.Doctor.Controllers
                 Description = _userService.GetById(doctorId).Name + " " + _userService.GetById(doctorId).SurName + "tarafından karaliste oluşturuldu"
             };
             _blackListService.Add(addBlackList);
-            return RedirectToAction("TodayAppointments", "Appointment");
+            return true;
         }
     }
 }

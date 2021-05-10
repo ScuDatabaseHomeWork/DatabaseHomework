@@ -39,7 +39,12 @@ namespace HospitalAppointment.UI
             {
                 app.UseDeveloperExceptionPage();
             }
+            else
+            {
+                app.UseExceptionHandler("/Error/ErrorPage");
+            }
 
+            app.UseStatusCodePagesWithReExecute("/Error/StatusCode", "?code = {0}");
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

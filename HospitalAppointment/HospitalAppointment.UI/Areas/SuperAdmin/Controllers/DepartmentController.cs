@@ -8,12 +8,15 @@ using HospitalAppointment.Business.Interfaces;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities;
 using HospitalAppointment.DTO.DTOs.Department;
 using HospitalAppointment.UI.CustomFilters;
+using HospitalAppointment.UI.StringInfo;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 
 namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
 {
-    [Area("SuperAdmin")]
+    [Authorize(Roles = RoleInfo.SuperAdmin)]
+    [Area(AreaInfo.SuperAdmin)]
     public class DepartmentController : Controller
     {
         private readonly ActiveSuperAdmin _activeSuperAdmin;
@@ -41,7 +44,6 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
         }
         
         [HttpPost]
-        [ValidModel]
         public IActionResult CreateDepartment(DepartmentAddDto departmentDto)
         {
             _departmentService.Add(_mapper.Map<Department>(departmentDto));
@@ -53,6 +55,20 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
         {
             _departmentService.Remove(_departmentService.GetById(id));
             return true;
+        }
+
+        public IActionResult UpdateDepartment(int departmentId)
+        {
+            TempData["ActiveSuperAdmin"] = _activeSuperAdmin.GetActiveSuperAdmin();
+            var updatedDepartment = _departmentService.GetById(departmentId);
+            return View(updatedDepartment);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateDepartment(Department department)
+        {
+            _departmentService.Update(department);
+            return RedirectToAction("Index", "Department");
         }
     }
 }

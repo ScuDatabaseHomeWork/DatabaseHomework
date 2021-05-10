@@ -9,6 +9,7 @@ namespace HospitalAppointment.DataAccess.Interfaces
     {
         List<User> GetPatientsWithAllTables();
         User CheckAndGetPatientByTcNo(long tc);
-        Patient GetPatientByUserId(int id);
+        User GetPatientWithAllTableByUserId(int id);
+        User GetPatientWithAllTablesByTcNo(long tcNo);
     }
 }

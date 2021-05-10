@@ -5,7 +5,9 @@ using AutoMapper;
 using HospitalAppointment.Business.Interfaces;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities;
 using HospitalAppointment.DTO.DTOs.Appointment;
+using HospitalAppointment.UI.StringInfo;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,7 +15,8 @@ using Microsoft.VisualBasic;
 
 namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
 {
-    [Area("PatientRegistrar")]
+    [Authorize(Roles = RoleInfo.PatientRegistrar)]
+    [Area(AreaInfo.PatientRegistrar)]
     public class AppointmentController : Controller
     {
         private ActivePatientRegistrar _activePatientRegistrar;
@@ -40,12 +43,12 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
 
         public IActionResult PatientInBlackList()
         {
-            TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+            TempData["ActivePatientRegistrar"] = _activePatientRegistrar.GetActivePatientRegistrar();
             return View();
         }
         public IActionResult SelectingPatient()
         {
-            TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+            TempData["ActivePatientRegistrar"] = _activePatientRegistrar.GetActivePatientRegistrar();
             return View();
         }
 
@@ -72,7 +75,7 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
             }
             else
             {
-                TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+                TempData["ActivePatientRegistrar"] = _activePatientRegistrar.GetActivePatientRegistrar();
                 ModelState.AddModelError("", "Hasta Bulunamadı");
                 return View(tc);
             }
@@ -81,7 +84,7 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
 
         public IActionResult SelectingDepartment(AppointmentUserDto appointmentUserDto)
         {
-            TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+            TempData["ActivePatientRegistrar"] = _activePatientRegistrar.GetActivePatientRegistrar();
             ViewBag.Departments = new SelectList(_departmentService.GetAll(), "Id", "DepartmanName");
             return View(appointmentUserDto);
         }
@@ -90,7 +93,7 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
         [HttpPost]
         public IActionResult SelectingDoctor(AppointmentUserDto appointmentUserDto)
         {
-            TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+            TempData["ActivePatientRegistrar"] = _activePatientRegistrar.GetActivePatientRegistrar();
             appointmentUserDto.DepartmentName = _departmentService.GetById(appointmentUserDto.DepartmentId).DepartmanName;
             ViewBag.DepartmentDoctors = new SelectList(_doctorService.GetDepartmentDoctorsByDepartmentId(appointmentUserDto.DepartmentId), "Id", "Name");
             return View(appointmentUserDto);
@@ -99,7 +102,7 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
         [HttpPost]
         public IActionResult SelectingDateDay(AppointmentUserDto appointmentUserDto)
         {
-            TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+            TempData["ActivePatientRegistrar"] = _activePatientRegistrar.GetActivePatientRegistrar();
             var appointmentDoctorUser = _userService.GetById(appointmentUserDto.DoctorUserId);
             appointmentUserDto.DoctorUserName = appointmentDoctorUser.Name;
             //  var appointmentDoctor = _doctorService.GetDoctorByUserId(appointmentDoctorUser.Id);
@@ -130,7 +133,7 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
         [HttpPost]
         public IActionResult SelectingDateHourTime(AppointmentUserDto appointmentUserDto)
         {
-            TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+            TempData["ActivePatientRegistrar"] = _activePatientRegistrar.GetActivePatientRegistrar();
             List<DateTime> existDateHourTimes =
                 _appointmentService.GetAppointmentsHourTimesByAppointmentDayAndDoctorId(appointmentUserDto.AppointmentDateTime, appointmentUserDto.DoctorUserId);
             ViewBag.existDateHourTimes = existDateHourTimes;
@@ -140,7 +143,7 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
         [HttpPost]
         public IActionResult FormAppointment(AppointmentUserDto appointmentUserDto)
         {
-            TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+            TempData["ActivePatientRegistrar"] = _activePatientRegistrar.GetActivePatientRegistrar();
             return View(appointmentUserDto);
         }
 

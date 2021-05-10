@@ -5,12 +5,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using HospitalAppointment.Business.Interfaces;
+using HospitalAppointment.UI.StringInfo;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 
 namespace HospitalAppointment.UI.Areas.Doctor.Controllers
 {
-    [Area("Doctor")]
+    [Authorize(Roles = RoleInfo.Doctor)]
+    [Area(AreaInfo.Doctor)]
     public class HomeController : Controller
     {
         private ActiveDoctor _activeDoctor;
@@ -22,8 +25,15 @@ namespace HospitalAppointment.UI.Areas.Doctor.Controllers
         }
         public IActionResult Index()
         {
-            TempData["ActiveSuperAdmin"] = _activeDoctor.GetActiveDoctor();
+            TempData["ActiveDoctor"] = _activeDoctor.GetActiveDoctor();
             return View();
+        }
+
+        public IActionResult MyProfile()
+        {
+            TempData["ActiveDoctor"] = _activeDoctor.GetActiveDoctor();
+            var activeDoctor = _activeDoctor.GetActiveDoctor();
+            return View(activeDoctor);
         }
     }
 }

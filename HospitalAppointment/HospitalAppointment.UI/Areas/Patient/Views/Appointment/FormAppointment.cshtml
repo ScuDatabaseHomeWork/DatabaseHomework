@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "CreateAppointment";
+    ViewData["Title"] = "Randevu";
 }
 
 
@@ -9,7 +9,7 @@
 <div class="col-md-10 container-fluid">
     <div class="card">
         <div class="card-header">
-            <h5>Bölüm Seçme Sayfası</h5>
+            <h5>Randevu</h5>
         </div>
         <div class="card-block">
             <form class="form-material" asp-action="CreateAppointment" method="post">
@@ -20,21 +20,19 @@
                 <input type="hidden" asp-for="DepartmentName" value="@Model.DepartmentName" />
                 <input type="hidden" asp-for="DoctorUserId" value="@Model.DoctorUserId" />
                 <input type="hidden" asp-for="DoctorUserName" value="@Model.DoctorUserName" />
-                @*<input type="hidden" asp-for="DoctorId" value="@Model.DoctorId" />*@
                 <input type="hidden" asp-for="PoliclinicId" value="@Model.PoliclinicId" />
                 <input type="hidden" asp-for="PoliclinicName" value="@Model.PoliclinicName" />
                 <input type="hidden" asp-for="AppointmentDateTime" value="@Model.AppointmentDateTime" />
-                @*<input type="hidden" asp-for="AppointmentDateTime" value="@Model.AppointmentDateTime" />*@
                 <div class="form-group form-default">
-                    <input type="text" disabled class="form-control" required="" value="@Model.Name @Model.SurName">
+                    <input type="text" disabled class="form-control" required value="@Model.Name @Model.SurName">
                     <span class="form-bar"></span>
                 </div>
                 <div class="form-group form-default">
-                    <input type="text" disabled class="form-control" required="" value="@Model.DepartmentName">
+                    <input type="text" disabled class="form-control" required value="@Model.DepartmentName">
                     <span class="form-bar"></span>
                 </div>
                 <div class="form-group form-default">
-                    <input type="text" disabled class="form-control" required="" value="@Model.DoctorUserName - @Model.PoliclinicName">
+                    <input type="text" disabled class="form-control" required value="@Model.DoctorUserName - @Model.PoliclinicName">
                     <span class="form-bar"></span>
                 </div>
                 <div class="form-group form-default" style="text-align: center">

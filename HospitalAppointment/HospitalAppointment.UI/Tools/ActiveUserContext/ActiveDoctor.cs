@@ -11,7 +11,6 @@ namespace HospitalAppointment.UI.Tools.ActiveUserContext
 {
     public class ActiveDoctor
     {
-
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IUserService _userService;
         private readonly IDoctorService _doctorService;
