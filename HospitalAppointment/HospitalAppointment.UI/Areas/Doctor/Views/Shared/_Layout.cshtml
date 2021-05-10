@@ -1,19 +1,9 @@
-﻿@using System.Security.Claims
-@using HospitalAppointment.Business.Concrete
-@using HospitalAppointment.Business.Interfaces
-@using HospitalAppointment.DTO.DTOs.Doctor
-@using HospitalAppointment.DTO.DTOs.Patient
-@using HospitalAppointment.DTO.DTOs.PatientRegistrar
-@using HospitalAppointment.DTO.DTOs.SuperAdmin
-@using HospitalAppointment.UI.Areas.SuperAdmin.Controllers
-@using HospitalAppointment.UI.Tools.ActiveUserContext
-@using Microsoft.AspNetCore.Http
-@using Microsoft.VisualStudio.Web.CodeGeneration
+﻿@using HospitalAppointment.DTO.DTOs.Doctor
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Mega Able bootstrap admin template by codedthemes </title>
+    <title>@ViewData["Title"]</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -42,7 +32,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" type="text/css" href="/templates/mega-able-lite/assets/icon/font-awesome/css/font-awesome.min.css">
     <!-- Style.css -->
-    <link rel="stylesheet" type="text/css" href="/templates/mega-able-lite/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/templates/mega-able-lite/assets/customCss/doctorStyle.css">
     <link rel="stylesheet" type="text/css" href="/templates/mega-able-lite/assets/css/jquery.mCustomScrollbar.css">
     @RenderSection("Csses", false)
 </head>
@@ -50,7 +40,7 @@
 <body>
 
     @{
-        ActiveDoctorDto activePatient = (ActiveDoctorDto)TempData["ActiveSuperAdmin"];
+        ActiveDoctorDto activeDoctor = (ActiveDoctorDto)TempData["ActiveDoctor"];
     }
     <!-- Pre-loader start -->
     @await Component.InvokeAsync("PreLoaderComponent")
@@ -79,7 +69,7 @@
                             <li class="user-profile header-notification">
                                 <a href="#!" class="waves-effect waves-light">
                                     <img src="/templates/mega-able-lite/assets/images/faq_man.png" class="img-radius" alt="User-Profile-Image">
-                                    <span>@activePatient.Name @activePatient.SurName</span>
+                                    <span>@activeDoctor.Name @activeDoctor.SurName</span>
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">
@@ -104,7 +94,7 @@
                                 <div class="main-menu-header">
                                     <img class="img-80 img-radius" src="/templates/mega-able-lite/assets/images/faq_man.png" alt="User-Profile-Image">
                                     <div class="user-details">
-                                        <span id="more-details">@activePatient.Name @activePatient.SurName</span>
+                                        <span id="more-details">@activeDoctor.Name @activeDoctor.SurName</span>
                                     </div>
                                 </div>
 
@@ -139,7 +129,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10">Sayın Doktor @activePatient.Name @activePatient.SurName</h5>
+                                            <h5 class="m-b-10">Sayın Doktor @activeDoctor.Name @activeDoctor.SurName</h5>
                                             <p class="m-b-0">Hastane Sistemimize Hoşgeldiniz</p>
                                         </div>
                                     </div>

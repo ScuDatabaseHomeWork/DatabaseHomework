@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 using AutoMapper;
 using HospitalAppointment.Business.Interfaces;
 using HospitalAppointment.DTO.DTOs.Prescribe;
+using HospitalAppointment.UI.StringInfo;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 
 namespace HospitalAppointment.UI.Areas.Patient.Controllers
 {
-    [Area("Patient")]
+    [Authorize(Roles = RoleInfo.Patient)]
+    [Area(AreaInfo.Patient)]
     public class PrescribeController : Controller
     {
         private ActivePatient _activePatient;
@@ -25,7 +28,7 @@ namespace HospitalAppointment.UI.Areas.Patient.Controllers
         }
         public IActionResult Index()
         {
-            TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
+            TempData["ActivePatient"] = _activePatient.GetActivePatient();
             var patientPrescribes = _mapper.Map<List<PrescribeOfPatientDto>>(
                 _prescribeService.GetPatientPrescribeByPatientId(_activePatient.GetActivePatient().UserId));
             return View(patientPrescribes);

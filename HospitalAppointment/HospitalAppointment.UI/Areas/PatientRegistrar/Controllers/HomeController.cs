@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 using AutoMapper;
 using HospitalAppointment.Business.Interfaces;
 using HospitalAppointment.DTO.DTOs.Appointment;
+using HospitalAppointment.UI.StringInfo;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 
 namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
 {
-    [Area("PatientRegistrar")]
+    [Authorize(Roles = RoleInfo.PatientRegistrar)]
+    [Area(AreaInfo.PatientRegistrar)]
     public class HomeController : Controller
     {
 
@@ -26,16 +29,16 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
         }
         public IActionResult Index()
         {
-            TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+            TempData["ActivePatientRegistrar"] = _activePatientRegistrar.GetActivePatientRegistrar();
             var patientRegistrarAppointments = _mapper.Map<List<AppointmentsOfPatientRegistrar>>(_appointmentService
                 .GetPatientRegistrarAppointmentsWithAllTables(_activePatientRegistrar
                 .GetActivePatientRegistrar().UserId));
             return View(patientRegistrarAppointments);
         }
 
-        public IActionResult MyProfil()
+        public IActionResult MyProfile()
         {
-            TempData["ActiveSuperAdmin"] = _activePatientRegistrar.GetActivePatientRegistrar();
+            TempData["ActivePatientRegistrar"] = _activePatientRegistrar.GetActivePatientRegistrar();
             var activePatientRegistrar = _activePatientRegistrar.GetActivePatientRegistrar();
             return View(activePatientRegistrar);
         }

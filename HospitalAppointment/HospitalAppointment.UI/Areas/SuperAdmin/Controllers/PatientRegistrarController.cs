@@ -7,12 +7,15 @@ using AutoMapper;
 using HospitalAppointment.Business.Interfaces;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities;
 using HospitalAppointment.DTO.DTOs.PatientRegistrar;
+using HospitalAppointment.UI.StringInfo;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 
 namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
 {
-    [Area("SuperAdmin")]
+    [Authorize(Roles = RoleInfo.SuperAdmin)]
+    [Area(AreaInfo.SuperAdmin)]
     public class PatientRegistrarController : Controller
     {
         private readonly ActiveSuperAdmin _activeSuperAdmin;
@@ -41,7 +44,7 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
         public IActionResult CreatePatientRegistrar()
         {
             TempData["ActiveSuperAdmin"] = _activeSuperAdmin.GetActiveSuperAdmin();
-            var patientRegistrarAddDto = new PatientRegistrarAddDto(){RolId = _rolService.GetPatientRegistrarRol().Id};
+            var patientRegistrarAddDto = new PatientRegistrarAddDto() { RolId = _rolService.GetPatientRegistrarRol().Id };
             return View(patientRegistrarAddDto);
         }
 

@@ -1,18 +1,18 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Veznedarlarım";
 }
 
 @model List<HospitalAppointment.DTO.DTOs.PatientRegistrar.PatientRegistrarListDto>
-@Html.Partial("PartialDeleteModal", "Veznedar")
+@Html.Partial("PartialDeleteModal", "Veznedar Sil")
 
 @if (Model.Count != 0)
 {
     <div class="card">
         <div class="card-header">
-            <h5>Hasta Ekleme Sayfası</h5>
+            <h5>Veznedarlarım</h5>
             <div class="card-header-right">
-                <a class="btn btn-secondary" asp-action="CreatePatientRegistrar">Yeni Hasta</a>
+                <a class="btn btn-secondary" asp-action="CreatePatientRegistrar">Yeni Veznedar</a>
             </div>
         </div>
         <div class="card-block table-border-style">

@@ -32,8 +32,6 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
                 {
                     return user;
                 }
-                //var patient = _context.Patients.FirstOrDefault(I => I.Id == user.Id);
-                //return patient != null ? user : null;
             }
             else
             {
@@ -42,13 +40,15 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             return null;
         }
 
-        public Patient GetPatientByUserId(int id)
+        public User GetPatientWithAllTableByUserId(int id)
         {
-            //return _context.Patients.FirstOrDefault(I => I.UserId == id);
-            return null;
+            return _context.Users.Include(I => I.Patient).FirstOrDefault(I => I.Id == id);
         }
 
-     
+        public User GetPatientWithAllTablesByTcNo(long tcNo)
+        {
+            return _context.Users.Include(I => I.Patient).FirstOrDefault(I => I.Tcno == tcNo);
+        }
 
     }
 }

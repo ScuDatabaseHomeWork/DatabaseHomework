@@ -7,12 +7,15 @@ using AutoMapper;
 using HospitalAppointment.Business.Concrete;
 using HospitalAppointment.Business.Interfaces;
 using HospitalAppointment.DTO.DTOs.BlackList;
+using HospitalAppointment.UI.StringInfo;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 
 namespace HospitalAppointment.UI.Areas.Patient.Controllers
 {
-    [Area("Patient")]
+    [Authorize(Roles = RoleInfo.Patient)]
+    [Area(AreaInfo.Patient)]
     public class BlackListController : Controller
     {
 
@@ -27,7 +30,7 @@ namespace HospitalAppointment.UI.Areas.Patient.Controllers
         }
         public IActionResult Index()
         {
-            TempData["ActiveSuperAdmin"] = _activePatient.GetActivePatient();
+            TempData["ActivePatient"] = _activePatient.GetActivePatient();
             var patientBlackLists = _mapper.Map<List<BlackListOfPatientDto>>(
                 _blackListService.GetPatientBlackListsByPatientId(_activePatient.GetActivePatient().UserId));
             return View(patientBlackLists);

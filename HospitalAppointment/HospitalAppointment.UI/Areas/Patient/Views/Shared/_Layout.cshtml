@@ -1,18 +1,9 @@
-﻿@using System.Security.Claims
-@using HospitalAppointment.Business.Concrete
-@using HospitalAppointment.Business.Interfaces
-@using HospitalAppointment.DTO.DTOs.Patient
-@using HospitalAppointment.DTO.DTOs.PatientRegistrar
-@using HospitalAppointment.DTO.DTOs.SuperAdmin
-@using HospitalAppointment.UI.Areas.SuperAdmin.Controllers
-@using HospitalAppointment.UI.Tools.ActiveUserContext
-@using Microsoft.AspNetCore.Http
-@using Microsoft.VisualStudio.Web.CodeGeneration
+﻿@using HospitalAppointment.DTO.DTOs.Patient
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Mega Able bootstrap admin template by codedthemes </title>
+    <title>@ViewData["Title"]</title>
     <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 10]>
@@ -41,7 +32,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" type="text/css" href="/templates/mega-able-lite/assets/icon/font-awesome/css/font-awesome.min.css">
     <!-- Style.css -->
-    <link rel="stylesheet" type="text/css" href="/templates/mega-able-lite/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/templates/mega-able-lite/assets/customCss/patientStyle.css">
     <link rel="stylesheet" type="text/css" href="/templates/mega-able-lite/assets/css/jquery.mCustomScrollbar.css">
     @RenderSection("Csses", false)
 </head>
@@ -49,7 +40,7 @@
 <body>
 
     @{
-        ActivePatientDto activePatient = (ActivePatientDto)TempData["ActiveSuperAdmin"];
+        ActivePatientDto activePatient = (ActivePatientDto)TempData["ActivePatient"];
     }
     <!-- Pre-loader start -->
     @await Component.InvokeAsync("PreLoaderComponent")

@@ -1,10 +1,10 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Departmanlarım";
 }
 @model List<HospitalAppointment.DTO.DTOs.Department.DepartmentListDto>
 
-@Html.Partial("PartialDeleteModal","Departman")
+@Html.Partial("PartialDeleteModal","Departman Sil")
 
 @if (Model.Count != 0)
 {
@@ -44,7 +44,7 @@
                                         }
                                     </ul>
                                 </th>
-                                <td><a class="btn btn-sm btn-success">Düzenle</a></td>
+                                <td><a class="btn btn-sm btn-success" asp-action="UpdateDepartment" asp-route-departmentId="@department.Id">Düzenle</a></td>
                                 <td><a class="btn btn-sm btn-danger openModal" data-modid="@department.Id" data-modtitle="@department.DepartmanName" data-toggle="modal" href="#myModal">Sil</a></td>
                             </tr>
                         }

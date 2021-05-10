@@ -25,9 +25,14 @@ namespace HospitalAppointment.Business.Concrete
             return _patientDal.CheckAndGetPatientByTcNo(tc);
         }
 
-        public Patient GetPatientByUserId(int id)
+        public User GetPatientWithAllTableByUserId(int id)
         {
-            return _patientDal.GetPatientByUserId(id);
+            return _patientDal.GetPatientWithAllTableByUserId(id);
+        }
+
+        public User GetPatientWithAllTablesByTcNo(long tcNo)
+        {
+            return _patientDal.GetPatientWithAllTablesByTcNo(tcNo);
         }
     }
 }

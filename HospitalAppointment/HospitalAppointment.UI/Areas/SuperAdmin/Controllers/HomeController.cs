@@ -7,12 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 using HospitalAppointment.Business.Interfaces;
 using HospitalAppointment.DTO.DTOs.SuperAdmin;
+using HospitalAppointment.UI.StringInfo;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 
 namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
 {
-    [Area("SuperAdmin")]
+    [Authorize(Roles = RoleInfo.SuperAdmin)]
+    [Area(AreaInfo.SuperAdmin)]
     public class HomeController : Controller
     {
         private ActiveSuperAdmin _activeSuperAdmin;
@@ -26,7 +29,7 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
             return View();
         }
 
-        public IActionResult MyProfil()
+        public IActionResult MyProfile()
         {
             TempData["ActiveSuperAdmin"] = _activeSuperAdmin.GetActiveSuperAdmin();
             var activeSuperAdmin = _activeSuperAdmin.GetActiveSuperAdmin();

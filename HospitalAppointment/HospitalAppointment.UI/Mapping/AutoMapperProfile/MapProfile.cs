@@ -72,8 +72,8 @@ namespace HospitalAppointment.UI.Mapping.AutoMapperProfile
             CreateMap<PatientAddDto, Patient>();
             CreateMap<User, PatientListDto>();
             CreateMap<PatientListDto, User>();
-            CreateMap<Patient, PatientUpdateDto>();
-            CreateMap<PatientUpdateDto, Patient>();
+            CreateMap<User, PatientUpdateDto>();
+            CreateMap<PatientUpdateDto, User>();
             #endregion
 
             #region PatientRegistrar-PatientRegistrarDto

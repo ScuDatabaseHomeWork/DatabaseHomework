@@ -28,14 +28,6 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
         {
             var doctors = _context.Users.Include(I => I.Doctor).Where(I => I.Doctor.DepartmentId == id).ToList();
             return doctors;
-            //var doctors = _context.Doctors.Where(I => I.DepartmentId == id).Include(I => I.User).ToList();
-            //List<User> doctorUsers = new List<User>();
-            //foreach (var doctor in doctors)
-            //{
-            //    doctorUsers.Add(_context.Users.FirstOrDefault(I => I.Id == doctor.UserId));
-            //}
-            //return doctorUsers;
-
         }
 
         public User GetDoctorWithAllTablesByUserId(int id)

@@ -8,13 +8,16 @@ using HospitalAppointment.Business.Interfaces;
 using HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities;
 using HospitalAppointment.DTO.DTOs.Department;
 using HospitalAppointment.DTO.DTOs.Doctor;
+using HospitalAppointment.UI.StringInfo;
 using HospitalAppointment.UI.Tools.ActiveUserContext;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
 {
-    [Area("SuperAdmin")]
+    [Authorize(Roles = RoleInfo.SuperAdmin)]
+    [Area(AreaInfo.SuperAdmin)]
     public class DoctorController : Controller
     {
         private readonly ActiveSuperAdmin _activeSuperAdmin;
