@@ -92,8 +92,6 @@ namespace HospitalAppointment.UI.Areas.Patient.Controllers
             TempData["ActivePatient"] = _activePatient.GetActivePatient();
             var appointmentDoctorUser = _userService.GetById(appointmentUserDto.DoctorUserId);
             appointmentUserDto.DoctorUserName = appointmentDoctorUser.Name;
-            //  var appointmentDoctor = _doctorService.GetDoctorByUserId(appointmentDoctorUser.Id);
-            // appointmentUserDto.DoctorId = appointmentDoctor.Id;
             var doctorPoliclinic = _policlinicService.GetById(appointmentUserDto.DoctorUserId);
             appointmentUserDto.PoliclinicId = doctorPoliclinic.Id;
             appointmentUserDto.PoliclinicName = doctorPoliclinic.PoliclinicName;

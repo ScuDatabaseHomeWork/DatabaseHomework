@@ -36,10 +36,21 @@ namespace HospitalAppointment.UI.Controllers
             return View(new UserLoginDto());
         }
 
-        public IActionResult PersonelLogIn()
+        public IActionResult SuperAdminLogIn()
         {
             return View(new UserLoginDto());
         }
+
+        public IActionResult PatientRegistrarLogIn()
+        {
+            return View(new UserLoginDto());
+        }
+
+        public IActionResult DoctorLogIn()
+        {
+            return View(new UserLoginDto());
+        }
+
 
         [HttpPost]
         public IActionResult UserLogIn(UserLoginDto userLoginDto)

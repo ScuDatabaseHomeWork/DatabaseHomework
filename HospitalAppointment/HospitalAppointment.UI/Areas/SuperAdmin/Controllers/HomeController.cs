@@ -36,9 +36,5 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
             return View(activeSuperAdmin);
         }
 
-        public IActionResult UpdateProfile()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -103,33 +103,3 @@ else
 
     </script>
 }
-
-@*<script>
-    $(".openModal").click(function() {
-        $(".modal-body>p.error").html("")
-        var appointmentDate = $(this).data("modtitle");
-        $(".modal-body>p.message").html(appointmentDate + "tarihli randevu silinsinmi");
-        /*  $(".modal-body>p.error").html("Dikkat sildiğiniz doktor bağlı poliklinikde silinecektir");*/
-        var doctorId = $(this).data("modid");
-        $(".delModal").data("doctorId", doctorId);
-        $(".delModal").data("appointmentDateTime", appointmentDate);
-    });
-
-    $(".delModal").click(function() {
-        var patientIdLocal = $(this).data("doctorId");
-        var appointmentDateTimeLocal = $(this).data("appointmentDateTime");
-        $.ajax({
-            type: "POST",
-            url: "/Patient/Appointment/RemoveAppointment/",
-            data: { appointmentDateTime: appointmentDateTimeLocal, patientId: patientIdLocal},
-            success: function(durum) {
-                if (durum == true) {
-                    window.location.replace("/Patient/Appointment/FutureAppointments");
-                } else {
-                    $(".modal-body>p.error").html("Bir hata oluştu");
-                }
-            }
-        });
-    });
-
-</script>*@

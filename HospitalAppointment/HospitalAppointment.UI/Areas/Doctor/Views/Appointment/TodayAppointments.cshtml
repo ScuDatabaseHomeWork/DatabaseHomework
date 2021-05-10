@@ -44,7 +44,7 @@
                                 }
                                 <td><a class="btn btn-sm btn-success" asp-controller="Prescribe" asp-action="CreatePrescribe" asp-route-patientId="@appointment.Patient.Id" asp-route-doctorId="@activePatient.UserId">Onayla</a></td>
                                 @*<td><a class="btn btn-sm btn-warning" asp-controller="BlackList" asp-action="CreateBlackList" asp-route-patientId="@appointment.Patient.Id" asp-route-doctorId="@activePatient.UserId">Gelmedi</a></td>*@
-                                <td><a class="btn btn-sm btn-danger openModal" data-modPatientId="@appointment.Patient.Id" data-modDoctorId="@activePatient.UserId" data-modtitle="@appointment.Date" data-toggle="modal" href="#myModal">Gelmedi</a></td>
+                                <td><a class="btn btn-sm btn-danger openModal" data-modpatientid="@appointment.Patient.Id" data-moddoctorid="@activePatient.UserId" data-modtitle="@appointment.Date" data-toggle="modal" href="#myModal">Gelmedi</a></td>
                             </tr>
                         }
                     </tbody>
@@ -85,16 +85,15 @@ else
             $(".modal-body>p.error").html("")
             var appointmentDate = $(this).data("modtitle");
             $(".modal-body>p.message").html(appointmentDate + "tarihli randevu karalisteye atılsınmı");
-            var patientId = $(this).data("modPatientId");
-            var doctorId = $(this).data("modDoctorId");
-            $(".delModal").data("patientId", patientId);
-            $(".delModal").data("doctorId", doctorId);
-           
+            var patientId = $(this).data("modpatientid");
+            var doctorId = $(this).data("moddoctorid");
+            $(".delModal").data("patientid", patientId);
+            $(".delModal").data("doctorid", doctorId);
         });
 
         $(".delModal").click(function () {
-            var patientIdLocal = $(this).data("patientId");
-            var doctorIdLocal = $(this).data("doctorId");
+            var patientIdLocal = $(this).data("patientid");
+            var doctorIdLocal = $(this).data("doctorid");
          
             $.ajax({
                 type: "POST",
@@ -102,7 +101,7 @@ else
                 data: { patientId: patientIdLocal, doctorId: doctorIdLocal },
                 success: function (durum) {
                     if (durum == true) {
-                        window.location.replace("/Patient/Appointment/FutureAppointments");
+                        window.location.replace("/Doctor/Home/Index");
                     } else {
                         $(".modal-body>p.error").html("Bir hata oluştu");
                     }
