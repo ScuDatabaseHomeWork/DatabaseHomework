@@ -11,7 +11,7 @@
         <div class="card-header">
             <h5>Hastalarım</h5>
             <div class="card-header-right">
-                <a class="btn btn-secondary" asp-action="CreatePatient">Yeni Hasta</a>
+                <a class="btn waves-effect waves-light hor-grd btn-grd-inverse" asp-action="CreatePatient">Yeni Hasta</a>
             </div>
         </div>
         <div class="card-block table-border-style">
@@ -35,8 +35,8 @@
                                 <td>@patientUser.Patient.MotherName</td>
                                 <td>@patientUser.Patient.FatherName</td>
                                 <td>@patientUser.Email</td>
-                                <td><a class="btn btn-sm btn-success" asp-action="UpdatePatient" asp-route-patientId="@patientUser.Id">Düzenle</a></td>
-                                <td><a class="btn btn-sm btn-danger openModal" data-modid="@patientUser.Id" data-modtitle="@patientUser.Name" data-toggle="modal" href="#myModal">Sil</a></td>
+                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-success" asp-action="UpdatePatient" asp-route-patientId="@patientUser.Id" style="width:85px;">Düzenle</a></td>
+                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-danger" data-modid="@patientUser.Id" data-modtitle="@patientUser.Name" data-toggle="modal" href="#myModal" style="width:85px;">Sil</a></td>
                             </tr>
                         }
                     </tbody>

@@ -10,9 +10,9 @@
 {
     <div class="card">
         <div class="card-header">
-            <h5>Hastane Departmanları Ve Poliklinikleri</h5>
+            <h5>Hastane Bölümleri Ve Poliklinikleri</h5>
             <div class="card-header-right">
-                <a class="btn btn-secondary" asp-action="CreateDepartment">Yeni Departman</a>
+                <a class="btn waves-effect waves-light hor-grd btn-grd-inverse" asp-action="CreateDepartment">Klinik Ekle</a>
             </div>
         </div>
         <div class="card-block table-border-style">
@@ -44,8 +44,8 @@
                                         }
                                     </ul>
                                 </th>
-                                <td><a class="btn btn-sm btn-success" asp-action="UpdateDepartment" asp-route-departmentId="@department.Id">Düzenle</a></td>
-                                <td><a class="btn btn-sm btn-danger openModal" data-modid="@department.Id" data-modtitle="@department.DepartmanName" data-toggle="modal" href="#myModal">Sil</a></td>
+                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-success" asp-action="UpdateDepartment" asp-route-departmentId="@department.Id" style="width:85px;">Düzenle</a></td>
+                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-danger" data-modid="@department.Id" data-modtitle="@department.DepartmanName" data-toggle="modal" href="#myModal" style="width:85px;">Sil</a></td>
                             </tr>
                         }
                     </tbody>

@@ -11,9 +11,9 @@
 {
     <div class="card">
         <div class="card-header">
-            <h5>Doktorlar Departmanları Ve Poliklinikleri</h5>
-            <div class="card-header-right">
-                <a class="btn btn-secondary" asp-action="CreateDoctor">Yeni Doktor</a>
+            <h5>Doktorlar Bölümleri Ve Poliklinikleri</h5><br />
+            <div class="card-header-right" >
+                <a class="btn waves-effect waves-light hor-grd btn-grd-inverse " asp-action="CreateDoctor">Yeni Doktor</a>
             </div>
         </div>
         <div class="card-block table-border-style">
@@ -24,7 +24,7 @@
                             <th>Doktor Adı Soyadı</th>
                             <th>Telefonu</th>
                             <th>Unvan</th>
-                            <th>Departman</th>
+                            <th>Klinik</th>
                             <th>Poliklinik</th>
                         </tr>
                     </thead>
@@ -36,9 +36,9 @@
                                 <td>@doctorUser.Telephone</td>
                                 <td>@doctorUser.Doctor.Apellation</td>
                                 <td>@doctorUser.Doctor.Department.DepartmanName</td>
-                                <td>@doctorUser.Doctor.Policlinic.PoliclinicName</td>
-                                <td><a class="btn btn-sm btn-success" asp-action="UpdateDoctor" asp-route-doctorId="@doctorUser.Id">Düzenle</a></td>
-                                <td><a class="btn btn-sm btn-danger openModal" data-modid="@doctorUser.Id" data-modtitle="@doctorUser.Name" data-toggle="modal" href="#myModal">Sil</a></td>
+                                <td >@doctorUser.Doctor.Policlinic.PoliclinicName</td>
+                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-success" asp-action="UpdateDoctor" asp-route-doctorId="@doctorUser.Id" style="width:85px;">Düzenle</a></td>
+                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-danger" data-modid="@doctorUser.Id" data-modtitle="@doctorUser.Name" data-toggle="modal" href="#myModal" style="width:85px;">Sil</a></td>
                             </tr>
                         }
                     </tbody>
