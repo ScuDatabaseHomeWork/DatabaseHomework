@@ -38,13 +38,13 @@
                 <div class="form-group form-default" style="text-align: center">
                     @foreach (var date in dateDays)
                     {
-                        <a class="selectDay asd btn btn-info btn-round waves-effect waves-light" value="@date.ToShortDateString()">@date.ToShortDateString()<br /> (@GetDateBeTurkish(date))</a>
+                        <a class="selectDay asd btn btn-mat waves-effect waves-light btn-success" value="@date.ToShortDateString()">@date.ToShortDateString()<br /> (@GetDateBeTurkish(date))</a>
                     }
                     <input id="appDateTime" type="hidden" asp-for="AppointmentDateTime" required/>
                 </div>
                 <br />
                 <div asp-validation-summary="All" class="text-danger"></div>
-                <button style="display: none" type="submit" class="next btn waves-effect waves-light btn-primary"><i class="icofont icofont-check-circled"></i>Kaydet</button>
+                <button style="display: none; width:85px; " type="submit" class="next btn waves-effect waves-light btn-grd-inverse">İleri</button>
             </form>
         </div>
     </div>
@@ -55,10 +55,10 @@
     <script>
 
         $(".selectDay").click(function () {
-            $('.selectDay').attr('class', 'selectDay btn btn-info btn-round waves-effect waves-light');
+            $('.selectDay').attr('class', 'selectDay btn btn-mat waves-effect waves-light btn-success');
             var day = $(this).attr("value");
             $("#appDateTime").attr("value", day);
-            $(this).removeClass('btn-info').addClass('btn-success');
+            $(this).removeClass('btn-success').addClass('btn-info');
             $(".next").show();
         });
     </script>

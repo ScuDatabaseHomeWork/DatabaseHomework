@@ -51,15 +51,11 @@
             <nav class="navbar header-navbar pcoded-header">
                 <div class="navbar-wrapper">
                     <div class="navbar-logo">
-                        <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
-
-                        </a>
-                        <a href="index.html">
+                        
+                        <a asp-action="Index" asp-controller="Home">
                             <img class="img-fluid" src="/templates/mega-able-lite/assets/images/logo.png" alt="Theme-Logo" />
                         </a>
-                        <a class="mobile-options waves-effect waves-light">
-                            <i class="ti-more"></i>
-                        </a>
+                        
                     </div>
 
                     <div class="navbar-container container-fluid">
@@ -94,13 +90,13 @@
                                 <div class="main-menu-header">
                                     <img class="img-80 img-radius" src="/templates/mega-able-lite/assets/images/faq_man.png" alt="User-Profile-Image">
                                     <div class="user-details">
-                                        <span id="more-details">@activePatient.Name @activePatient.SurName</span>
+                                        <span id="more-details"><b>@activePatient.Name @activePatient.SurName</b></span>
                                     </div>
                                 </div>
 
                             </div>
 
-                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Randevu Menü</div>
+                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation" style="text-align:center;"> Menü</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
                                     <a class="waves-effect waves-dark" asp-action="SelectingDepartment" asp-controller="Appointment">
@@ -109,52 +105,56 @@
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
-                                <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="PastAppointments" asp-controller="Appointment">
-                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Geçmiş Randevular</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="FutureAppointments" asp-controller="Appointment">
-                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Gelecek Randevular</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Reçete Menü</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="Index" asp-controller="Prescribe">
-                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Reçetelerim</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Karaliste Menü</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="Index" asp-controller="BlackList">
-                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Karalistelerim</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Profil Menü</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="MyProfile" asp-controller="Home">
-                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Profilim</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                                </ul>
+                                <ul class="pcoded-item pcoded-left-item">
+                                    <li class="">
+                                        <a class="waves-effect waves-dark" asp-action="PastAppointments" asp-controller="Appointment">
+                                            <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.dash.main">Geçmiş Randevular</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                    </ul>
+                                    <ul class="pcoded-item pcoded-left-item">
+                                        <li class="">
+                                            <a class="waves-effect waves-dark" asp-action="FutureAppointments" asp-controller="Appointment">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Gelecek Randevular</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="pcoded-item pcoded-left-item">
+                                        <li class="">
+                                            <a class="waves-effect waves-dark" asp-action="Index" asp-controller="Prescribe">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Reçetelerim</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="pcoded-item pcoded-left-item">
+                                        <li class="">
+                                            <a class="waves-effect waves-dark" asp-action="Index" asp-controller="BlackList">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Karalistelerim</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="pcoded-item pcoded-left-item">
+                                        <li class="">
+                                            <a class="waves-effect waves-dark" asp-action="MyProfile" asp-controller="Home">
+                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Profilim</span>
+                                                <span class="pcoded-mcaret"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+</div>
                     </nav>
                     <div class="pcoded-content">
                         <!-- Page-header start -->
@@ -164,7 +164,7 @@
                                     <div class="col-md-8">
                                         <div class="page-header-title">
                                             <h5 class="m-b-10">Sayın Hasta @activePatient.Name @activePatient.SurName</h5>
-                                            <p class="m-b-0">Hastane Sistemimize Hoşgeldiniz</p>
+                                            <p class="m-b-0">.</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">

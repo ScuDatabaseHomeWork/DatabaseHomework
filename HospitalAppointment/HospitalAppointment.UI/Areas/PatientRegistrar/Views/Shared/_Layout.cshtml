@@ -51,15 +51,11 @@
             <nav class="navbar header-navbar pcoded-header">
                 <div class="navbar-wrapper">
                     <div class="navbar-logo">
-                        <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
-
-                        </a>
-                        <a href="index.html">
+                     
+                        <a asp-action="Index" asp-controller="Home">
                             <img class="img-fluid" src="/templates/mega-able-lite/assets/images/logo.png" alt="Theme-Logo" />
                         </a>
-                        <a class="mobile-options waves-effect waves-light">
-                            <i class="ti-more"></i>
-                        </a>
+                        
                     </div>
 
                     <div class="navbar-container container-fluid">
@@ -99,7 +95,7 @@
                                 </div>
 
                             </div>
-                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Hasta Menü</div>
+                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation" style="text-align:center;">Menü</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="">
                                     <a class="waves-effect waves-dark" asp-action="CreatePatient" asp-controller="Patient">
@@ -108,42 +104,46 @@
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
-                                <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="UpdatePatientForm" asp-controller="Patient">
-                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Hasta Düzenle</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Randevu Menü</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="SelectingPatient" asp-controller="Appointment">
-                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Hastaya Randevu ver</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="Index" asp-controller="Home">
-                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Verdiğim Randevular</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Profil Menü</div>
-                            <ul class="pcoded-item pcoded-left-item">
-                                <li class="">
-                                    <a class="waves-effect waves-dark" asp-action="MyProfile" asp-controller="Home">
-                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Profilim</span>
-                                        <span class="pcoded-mcaret"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                                </ul>
+                                <ul class="pcoded-item pcoded-left-item">
+                                    <li class="">
+                                        <a class="waves-effect waves-dark" asp-action="UpdatePatientForm" asp-controller="Patient">
+                                            <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.dash.main">Hasta Güncelle</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <ul class="pcoded-item pcoded-left-item">
+                                    <li class="">
+                                        <a class="waves-effect waves-dark" asp-action="SelectingPatient" asp-controller="Appointment">
+                                            <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.dash.main">Hastaya Randevu ver</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="pcoded-item pcoded-left-item">
+                                    <li class="">
+                                        <a class="waves-effect waves-dark" asp-action="Index" asp-controller="Home">
+                                            <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.dash.main">Verdiğim Randevular</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <ul class="pcoded-item pcoded-left-item">
+                                    <li class="">
+                                        <a class="waves-effect waves-dark" asp-action="MyProfile" asp-controller="Home">
+                                            <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                            <span class="pcoded-mtext" data-i18n="nav.dash.main">Profilim</span>
+                                            <span class="pcoded-mcaret"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+</div>
                     </nav>
                     <div class="pcoded-content">
                         <!-- Page-header start -->
@@ -153,7 +153,7 @@
                                     <div class="col-md-8">
                                         <div class="page-header-title">
                                             <h5 class="m-b-10">Sayın Veznedar @activePatientRegistrar.Name @activePatientRegistrar.SurName</h5>
-                                            <p class="m-b-0">Hastane Sistemimize Hoşgeldiniz</p>
+                                            <p class="m-b-0">.</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">

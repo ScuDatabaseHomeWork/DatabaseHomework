@@ -11,7 +11,7 @@
 <div class="col-md-10 container-fluid">
     <div class="card">
         <div class="card-header">
-            <h5>Randevu Saat Dakika Seçme Sayfası</h5>
+            <h5>Randevu Saat  Seçme </h5>
         </div>
         <div class="card-block">
             <form class="form-material" asp-action="FormAppointment" method="post">
@@ -57,11 +57,11 @@
                                 DateTime dateTime = new DateTime(dateYear, dateMonth, dateDay, i, j, 0);
                                 if (existDateHourTimes.Contains(dateTime))
                                 {
-                                    <button class="btn waves-effect waves-light btn-warning  btn-disabled disabled">@dateTime.ToShortTimeString()</button>
+                                    <button class="btn waves-effect waves-light hor-grd btn-grd-danger  btn-disabled disabled">@dateTime.ToShortTimeString()</button>
                                 }
                                 else
                                 {
-                                    <a style="color: white" class="selectTime btn waves-effect waves-light btn-secondary" value="@dateTime">@dateTime.ToShortTimeString()</a>
+                                    <a style="color: white" class="selectTime btn waves-effect waves-light hor-grd btn-grd-info" value="@dateTime">@dateTime.ToShortTimeString()</a>
                                 }
                             }
                             <br />
@@ -73,7 +73,7 @@
                 </div>
                 <br />
                 <div asp-validation-summary="All" class="text-danger"></div>
-                <button style="display: none" type="submit" class="next btn waves-effect waves-light btn-primary"><i class="icofont icofont-check-circled"></i>Kaydet</button>
+                <button style="display: none; width:85px;" type="submit" class="next btn waves-effect waves-light btn-grd-inverse" >İleri</button>
             </form>
         </div>
     </div>
@@ -83,10 +83,10 @@
 {
     <script>
         $(".selectTime").mousedown(function () {
-            $('.selectTime').attr('class', 'selectTime btn waves-effect waves-light btn-secondary');
+            $('.selectTime').attr('class', 'selectTime btn waves-effect waves-light hor-grd btn-grd-info');
             var dateTime = $(this).attr("value");
             $("#appDateTime").attr("value", dateTime);
-            $(this).removeClass('btn-secondary').addClass('btn-success');
+            $(this).removeClass('btn-grd-info').addClass('btn-grd-success');
             $(".next").show();
         });
     </script>

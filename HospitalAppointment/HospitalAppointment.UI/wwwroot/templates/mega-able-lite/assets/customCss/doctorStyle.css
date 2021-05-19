@@ -53,7 +53,7 @@ a {
       font-size: 14px; } }
   a:focus, a:hover {
     text-decoration: none;
-    color: #448aff; }
+    color: #fff; }
 
 h4 {
   font-size: 1.375rem; }
@@ -6013,7 +6013,7 @@ table tbody .border-bottom-info td {
       margin-top: 10px;
       position: relative; }
       .main-menu .main-menu-header .user-details #more-details {
-        cursor: pointer; }
+         }
       .main-menu .main-menu-header .user-details span {
         color: #fff;
         display: block;
@@ -7580,7 +7580,7 @@ table tbody .border-bottom-info td {
 .pcoded.nocollapsed[theme-layout="vertical"][pcoded-device-type="phone"] #styleSelector {
   top: 100px; }
 .pcoded .pcoded-navbar .pcoded-navigation-label {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 1px;
   opacity: 1;
@@ -7592,8 +7592,9 @@ table tbody .border-bottom-info td {
           transform: rotateX(0deg);
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear; }
-  .pcoded .pcoded-navbar .pcoded-navigation-label[menu-title-theme="theme1"] {
-    color: #ff5252; }
+    .pcoded .pcoded-navbar .pcoded-navigation-label[menu-title-theme="theme1"] {
+        color: #37474f;
+    }
   .pcoded .pcoded-navbar .pcoded-navigation-label[menu-title-theme="theme2"] {
     color: #b71c1c; }
   .pcoded .pcoded-navbar .pcoded-navigation-label[menu-title-theme="theme3"] {
@@ -8413,12 +8414,14 @@ body[themebg-pattern="theme6"] {
 .pcoded[theme-layout="vertical"][vertical-nav-type="fullpage"] .pcoded-main-container, .pcoded[theme-layout="vertical"][vnavigation-view="view3"] .pcoded-main-container {
   position: static; }
 .pcoded .pcoded-header[header-theme="theme1"] {
-  background: #ff5252; }
+    background: #3E3E3E;
+}
   .pcoded .pcoded-header[header-theme="theme1"] .input-group-addon,
   .pcoded .pcoded-header[header-theme="theme1"] a {
     color: #fff; }
 .pcoded .pcoded-header[header-theme="theme2"] {
-  background: #b71c1c; }
+    background: #3E3E3E;
+}
   .pcoded .pcoded-header[header-theme="theme2"] .input-group-addon,
   .pcoded .pcoded-header[header-theme="theme2"] a {
     color: #fff; }
@@ -8443,9 +8446,9 @@ body[themebg-pattern="theme6"] {
   .pcoded .pcoded-header[header-theme="theme6"] a {
     color: #fff; }
 .pcoded[fream-type="theme1"] .page-header:before, .pcoded[fream-type="theme1"] .main-menu .main-menu-header:before {
-  background: rgba(255, 82, 82, 0.5); }
+  background: rgba(62, 62, 62, 0.8); }
 .pcoded[fream-type="theme2"] .page-header:before, .pcoded[fream-type="theme2"] .main-menu .main-menu-header:before {
-  background: rgba(183, 28, 28, 0.5); }
+  background: rgba(66, 10, 10, 0.5); }
 .pcoded[fream-type="theme3"] .page-header:before, .pcoded[fream-type="theme3"] .main-menu .main-menu-header:before {
   background: rgba(76, 175, 80, 0.5); }
 .pcoded[fream-type="theme4"] .page-header:before, .pcoded[fream-type="theme4"] .main-menu .main-menu-header:before {

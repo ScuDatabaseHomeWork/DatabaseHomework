@@ -42,9 +42,9 @@
                                 {
                                     <td>Hasta kayıtçı yok</td>
                                 }
-                                <td><a class="btn btn-sm btn-success" asp-controller="Prescribe" asp-action="CreatePrescribe" asp-route-patientId="@appointment.Patient.Id" asp-route-doctorId="@activePatient.UserId">Onayla</a></td>
-                                @*<td><a class="btn btn-sm btn-warning" asp-controller="BlackList" asp-action="CreateBlackList" asp-route-patientId="@appointment.Patient.Id" asp-route-doctorId="@activePatient.UserId">Gelmedi</a></td>*@
-                                <td><a class="btn btn-sm btn-danger openModal" data-modpatientid="@appointment.Patient.Id" data-moddoctorid="@activePatient.UserId" data-modtitle="@appointment.Date" data-toggle="modal" href="#myModal">Gelmedi</a></td>
+                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-success" asp-controller="Prescribe" asp-action="CreatePrescribe" asp-route-patientId="@appointment.Patient.Id" asp-route-doctorId="@activePatient.UserId" style="width:85px;">Onayla</a></td>
+                               
+                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-danger" data-modpatientid="@appointment.Patient.Id" data-moddoctorid="@activePatient.UserId" data-modtitle="@appointment.Date" data-toggle="modal" href="#myModal" style="width:85px;">Gelmedi</a></td>
                             </tr>
                         }
                     </tbody>
