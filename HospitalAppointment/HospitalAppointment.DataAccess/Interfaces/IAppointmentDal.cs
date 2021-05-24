@@ -13,5 +13,6 @@ namespace HospitalAppointment.DataAccess.Interfaces
         List<Appointment> GetPatientFutureAppointmentsByPatientId(int id);
         List<Appointment> GetTodayAppointmentsByDoctorId(int id);
         void RemoveAppointmentByDateAndDoctorId(DateTime appointmentDateTime, int patientId);
+        Appointment GetAppointmentByPatientIdAndDateTime(int patientId, DateTime appDateTime);
     }
 }

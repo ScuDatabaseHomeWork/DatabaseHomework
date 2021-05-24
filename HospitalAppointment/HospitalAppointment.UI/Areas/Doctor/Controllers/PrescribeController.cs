@@ -21,19 +21,26 @@ namespace HospitalAppointment.UI.Areas.Doctor.Controllers
         private ActiveDoctor _activeDoctor;
         private readonly IMapper _mapper;
         private readonly IPrescribeService _prescribeService;
-        public PrescribeController(IPrescribeService prescribeService,IMapper mapper, IHttpContextAccessor httpContextAccessor, IUserService userService, IDoctorService doctorService)
+        private readonly IAppointmentService _appointmentService;
+        public PrescribeController(IAppointmentService appointmentService, IPrescribeService prescribeService, IMapper mapper, IHttpContextAccessor httpContextAccessor, IUserService userService, IDoctorService doctorService)
         {
             _activeDoctor = new ActiveDoctor(httpContextAccessor, userService, doctorService);
             _mapper = mapper;
             _prescribeService = prescribeService;
+            _appointmentService = appointmentService;
         }
-        public IActionResult CreatePrescribe(int patientId, int doctorId)
+        public IActionResult CreatePrescribe(int patientId, int doctorId, string appDateTime)
         {
+            DateTime appDateTimeLocal = Convert.ToDateTime(appDateTime);
+            var nowAppointment = _appointmentService.GetAppointmentByPatientIdAndDateTime(patientId, appDateTimeLocal);
+            nowAppointment.Confirmed = true;
+            _appointmentService.Update(nowAppointment);
             TempData["ActiveDoctor"] = _activeDoctor.GetActiveDoctor();
+
             var addPrescribeDto = new PrescribeAddDto()
             {
-                PatientId =  patientId,
-                DoctorId =  doctorId
+                PatientId = patientId,
+                DoctorId = doctorId
             };
             return View(addPrescribeDto);
         }

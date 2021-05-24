@@ -76,8 +76,16 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
 
         public bool RemovePatientRegistrar(int id)
         {
-            _userService.Remove(_userService.GetById(id));
-            return true;
+            try
+            {
+                _userService.Remove(_userService.GetById(id));
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
         }
 
 

@@ -4,7 +4,7 @@
 }
 
 @{
-    ActiveDoctorDto activePatient = (ActiveDoctorDto)TempData["ActiveDoctor"];
+    ActiveDoctorDto activeDoctor = (ActiveDoctorDto)TempData["ActiveDoctor"];
 }
 @using HospitalAppointment.DTO.DTOs.Doctor
 @using HospitalAppointment.Business.Interfaces
@@ -42,9 +42,9 @@
                                 {
                                     <td>Hasta kayıtçı yok</td>
                                 }
-                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-success" asp-controller="Prescribe" asp-action="CreatePrescribe" asp-route-patientId="@appointment.Patient.Id" asp-route-doctorId="@activePatient.UserId" style="width:85px;">Onayla</a></td>
+                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-success" asp-controller="Prescribe" asp-action="CreatePrescribe" asp-route-patientId="@appointment.Patient.Id" asp-route-doctorId="@activeDoctor.UserId" asp-route-appDateTime="@appointment.Date.ToString()" style="width:85px;">Onayla</a></td>
                                
-                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-danger" data-modpatientid="@appointment.Patient.Id" data-moddoctorid="@activePatient.UserId" data-modtitle="@appointment.Date" data-toggle="modal" href="#myModal" style="width:85px;">Gelmedi</a></td>
+                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-danger openModal" data-modpatientid="@appointment.Patient.Id" data-moddoctorid="@activeDoctor.UserId" data-modtitle="@appointment.Date" data-toggle="modal" href="#myModal" style="width:85px;">Gelmedi</a></td>
                             </tr>
                         }
                     </tbody>
@@ -89,16 +89,18 @@ else
             var doctorId = $(this).data("moddoctorid");
             $(".delModal").data("patientid", patientId);
             $(".delModal").data("doctorid", doctorId);
+            $(".delModal").data("appdatetime", appointmentDate);
         });
 
         $(".delModal").click(function () {
             var patientIdLocal = $(this).data("patientid");
             var doctorIdLocal = $(this).data("doctorid");
+            var appDateTimeLocal = $(this).data("appdatetime");
          
             $.ajax({
                 type: "POST",
                 url: "/Doctor/BlackList/CreateBlackList/",
-                data: { patientId: patientIdLocal, doctorId: doctorIdLocal },
+                data: { patientId: patientIdLocal, doctorId: doctorIdLocal, appDateTime: appDateTimeLocal},
                 success: function (durum) {
                     if (durum == true) {
                         window.location.replace("/Doctor/Home/Index");

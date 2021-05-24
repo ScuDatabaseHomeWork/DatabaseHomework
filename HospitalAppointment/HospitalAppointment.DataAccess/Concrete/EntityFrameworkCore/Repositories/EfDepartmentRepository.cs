@@ -22,7 +22,10 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             return  _context.Departments.Include(I => I.Policlinics).ToList();
         }
 
-
+        public List<ViewGetWithPol> GetDepartmentsWithPoliclinics()
+        {
+            return _context.ViewGetWithPols.ToList();
+        }
 
     }
 }

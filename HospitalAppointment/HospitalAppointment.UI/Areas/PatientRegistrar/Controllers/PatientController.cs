@@ -22,14 +22,16 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
         private readonly IRolService _rolService;
         private readonly IUserService _userService;
         private readonly IPatientService _patientService;
+        private readonly ISuperAdminService _superAdminService;
         private readonly IMapper _mapper;
-        public PatientController(IMapper mapper,IPatientService patientService,IRolService rolService,IHttpContextAccessor httpContextAccessor, IUserService userService, IPatientRegistrarService patientRegistrarService)
+        public PatientController(ISuperAdminService superAdminService,IMapper mapper,IPatientService patientService,IRolService rolService,IHttpContextAccessor httpContextAccessor, IUserService userService, IPatientRegistrarService patientRegistrarService)
         {
             _activePatientRegistrar = new ActivePatientRegistrar(httpContextAccessor, userService, patientRegistrarService);
             _rolService = rolService;
             _userService = userService;
             _patientService = patientService;
             _mapper = mapper;
+            _superAdminService = superAdminService;
         }
   
 

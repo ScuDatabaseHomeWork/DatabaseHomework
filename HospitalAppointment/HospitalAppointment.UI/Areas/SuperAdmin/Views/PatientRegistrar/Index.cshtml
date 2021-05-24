@@ -35,7 +35,7 @@
                                 <td>@patientRegistrarUser.Email</td>
                                 <td>@patientRegistrarUser.PatientRegistrar.TellerNumber</td>
                                 <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-success" asp-action="UpdatePatientRegistrar" asp-route-patientRegistrarId="@patientRegistrarUser.Id" style="width:85px;">Düzenle</a></td>
-                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-danger" data-modid="@patientRegistrarUser.Id" data-modtitle="@patientRegistrarUser.Name" data-toggle="modal" href="#myModal" style="width:85px;">Sil</a></td>
+                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-danger openModal" data-modid="@patientRegistrarUser.Id" data-modtitle="@patientRegistrarUser.Name" data-toggle="modal" href="#myModal" style="width:85px;">Sil</a></td>
                             </tr>
                         }
                     </tbody>

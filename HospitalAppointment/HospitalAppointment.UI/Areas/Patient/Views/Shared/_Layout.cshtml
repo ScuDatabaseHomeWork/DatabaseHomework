@@ -51,11 +51,11 @@
             <nav class="navbar header-navbar pcoded-header">
                 <div class="navbar-wrapper">
                     <div class="navbar-logo">
-                        
+
                         <a asp-action="Index" asp-controller="Home">
                             <img class="img-fluid" src="/templates/mega-able-lite/assets/images/logo.png" alt="Theme-Logo" />
                         </a>
-                        
+
                     </div>
 
                     <div class="navbar-container container-fluid">
@@ -105,56 +105,56 @@
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
-                                </ul>
-                                <ul class="pcoded-item pcoded-left-item">
-                                    <li class="">
-                                        <a class="waves-effect waves-dark" asp-action="PastAppointments" asp-controller="Appointment">
-                                            <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                            <span class="pcoded-mtext" data-i18n="nav.dash.main">Geçmiş Randevular</span>
-                                            <span class="pcoded-mcaret"></span>
-                                        </a>
-                                    </li>
-                                    </ul>
-                                    <ul class="pcoded-item pcoded-left-item">
-                                        <li class="">
-                                            <a class="waves-effect waves-dark" asp-action="FutureAppointments" asp-controller="Appointment">
-                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Gelecek Randevular</span>
-                                                <span class="pcoded-mcaret"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
+                            </ul>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a class="waves-effect waves-dark" asp-action="PastAppointments" asp-controller="Appointment">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Geçmiş Randevular</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a class="waves-effect waves-dark" asp-action="FutureAppointments" asp-controller="Appointment">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Gelecek Randevular</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
 
-                                    <ul class="pcoded-item pcoded-left-item">
-                                        <li class="">
-                                            <a class="waves-effect waves-dark" asp-action="Index" asp-controller="Prescribe">
-                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Reçetelerim</span>
-                                                <span class="pcoded-mcaret"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a class="waves-effect waves-dark" asp-action="Index" asp-controller="Prescribe">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Reçetelerim</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
 
-                                    <ul class="pcoded-item pcoded-left-item">
-                                        <li class="">
-                                            <a class="waves-effect waves-dark" asp-action="Index" asp-controller="BlackList">
-                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Karalistelerim</span>
-                                                <span class="pcoded-mcaret"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a class="waves-effect waves-dark" asp-action="Index" asp-controller="BlackList">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Karalistelerim</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
 
-                                    <ul class="pcoded-item pcoded-left-item">
-                                        <li class="">
-                                            <a class="waves-effect waves-dark" asp-action="MyProfile" asp-controller="Home">
-                                                <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                                <span class="pcoded-mtext" data-i18n="nav.dash.main">Profilim</span>
-                                                <span class="pcoded-mcaret"></span>
-                                            </a>
-                                        </li>
-                                    </ul>
-</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="">
+                                    <a class="waves-effect waves-dark" asp-action="MyProfile" asp-controller="Home">
+                                        <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                                        <span class="pcoded-mtext" data-i18n="nav.dash.main">Profilim</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </nav>
                     <div class="pcoded-content">
                         <!-- Page-header start -->
@@ -164,7 +164,7 @@
                                     <div class="col-md-8">
                                         <div class="page-header-title">
                                             <h5 class="m-b-10">Sayın Hasta @activePatient.Name @activePatient.SurName</h5>
-                                            <p class="m-b-0">.</p>
+                                            <p class="m-b-0">&nbsp;</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">

@@ -8,5 +8,6 @@ namespace HospitalAppointment.DataAccess.Interfaces
     public interface IDepartmentDal:IGenericDal<Department>
     {
         List<Department> GetWithPoliclinics();
+        List<ViewGetWithPol> GetDepartmentsWithPoliclinics();
     }
 }

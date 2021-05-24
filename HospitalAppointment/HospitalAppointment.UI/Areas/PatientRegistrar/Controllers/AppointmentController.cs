@@ -157,7 +157,8 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
                 DoctorId = appointmentUserDto.DoctorUserId,
                 Date = appointmentUserDto.AppointmentDateTime,
                 PatientId = appointmentUserDto.UserId,
-                RegistrarId = _activePatientRegistrar.GetActivePatientRegistrar().UserId
+                RegistrarId = _activePatientRegistrar.GetActivePatientRegistrar().UserId,
+                Confirmed = false
             };
             _appointmentService.Add(appointment);
             return RedirectToAction("Index", "Home");

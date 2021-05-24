@@ -52,7 +52,7 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             return _context.Appointments
                 .Include(I => I.Doctor)
                 .Include(I => I.Registrar)
-                .Include(I=>I.Patient)
+                .Include(I => I.Patient)
                 .Where(I => I.PatientId == id).Where(I => I.Date > DateTime.Now)
                 .ToList();
         }
@@ -63,7 +63,9 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             var doctorAppointments = _context.Appointments
                 .Include(I => I.Registrar)
                 .Include(I => I.Patient)
-                .Where(I => I.DoctorId == id).ToList();
+                .Where(I => I.DoctorId == id)
+                .Where(I => I.Confirmed == false)
+                .ToList();
             List<Appointment> todayDoctorAppointments = new List<Appointment>();
             foreach (var doctorAppointment in doctorAppointments)
             {
@@ -81,6 +83,12 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Repositori
             var appointment = appointments.FirstOrDefault(I => I.Date == appointmentDateTime);
             _context.Appointments.Remove(appointment);
             _context.SaveChanges();
+        }
+
+        public Appointment GetAppointmentByPatientIdAndDateTime(int patientId, DateTime appDateTime)
+        {
+            return _context.Appointments.Where(I => I.Date == appDateTime)
+                .FirstOrDefault(I => I.PatientId == patientId);
         }
     }
 }

@@ -139,7 +139,8 @@ namespace HospitalAppointment.UI.Areas.Patient.Controllers
                 DoctorId = appointmentUserDto.DoctorUserId,
                 Date = appointmentUserDto.AppointmentDateTime,
                 PatientId = appointmentUserDto.UserId,
-                RegistrarId = null
+                RegistrarId = null,
+                Confirmed = false
             };
             _appointmentService.Add(appointment);
             return RedirectToAction("Index", "Home");
@@ -148,8 +149,16 @@ namespace HospitalAppointment.UI.Areas.Patient.Controllers
         [HttpPost]
         public bool RemoveAppointment(DateTime appointmentDateTime, int patientId)
         {
-            _appointmentService.RemoveAppointmentByDateAndDoctorId(appointmentDateTime, patientId);
-            return true;
+            try
+            {
+                _appointmentService.RemoveAppointmentByDateAndDoctorId(appointmentDateTime, patientId);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
         }
 
     }

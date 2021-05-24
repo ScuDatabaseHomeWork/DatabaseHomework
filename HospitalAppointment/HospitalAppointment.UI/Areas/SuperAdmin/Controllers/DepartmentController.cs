@@ -23,7 +23,7 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
         private readonly IDepartmentService _departmentService;
         private readonly IPoliclinicService _policlinicService;
         private readonly IMapper _mapper;
-        public DepartmentController(IPoliclinicService policlinicService,IMapper mapper,IDepartmentService departmentService,IHttpContextAccessor httpContextAccessor, IUserService userService, ISuperAdminService superAdminService)
+        public DepartmentController(IPoliclinicService policlinicService, IMapper mapper, IDepartmentService departmentService, IHttpContextAccessor httpContextAccessor, IUserService userService, ISuperAdminService superAdminService)
         {
             _activeSuperAdmin = new ActiveSuperAdmin(httpContextAccessor, userService, superAdminService);
             _departmentService = departmentService;
@@ -34,7 +34,10 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
         public IActionResult Index()
         {
             TempData["ActiveSuperAdmin"] = _activeSuperAdmin.GetActiveSuperAdmin();
-            var departments = _mapper.Map<List<DepartmentListDto>>(_departmentService.GetWithPoliclinics());
+            //var departments = _mapper.Map<List<DepartmentListDto>>(_departmentService.GetWithPoliclinics());
+            var allDepartments = _departmentService.GetAll();
+            ViewData["depPoliclinics"] = _departmentService.GetDepartmentsWithPoliclinics();
+            var departments = _mapper.Map<List<DepartmentListDto>>(allDepartments);
             return View(departments);
         }
         public IActionResult CreateDepartment()
@@ -42,7 +45,7 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
             TempData["ActiveSuperAdmin"] = _activeSuperAdmin.GetActiveSuperAdmin();
             return View(new DepartmentAddDto());
         }
-        
+
         [HttpPost]
         public IActionResult CreateDepartment(DepartmentAddDto departmentDto)
         {
@@ -53,8 +56,16 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
         [HttpPost]
         public bool RemoveDepartment(int id)
         {
-            _departmentService.Remove(_departmentService.GetById(id));
-            return true;
+            try
+            {
+                _departmentService.Remove(_departmentService.GetById(id));
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
         }
 
         public IActionResult UpdateDepartment(int departmentId)

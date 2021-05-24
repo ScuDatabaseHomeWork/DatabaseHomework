@@ -44,5 +44,10 @@ namespace HospitalAppointment.Business.Concrete
         {
             _appointmentDal.RemoveAppointmentByDateAndDoctorId(appointmentDateTime,patientId);
         }
+
+        public Appointment GetAppointmentByPatientIdAndDateTime(int patientId, DateTime appDateTime)
+        {
+           return _appointmentDal.GetAppointmentByPatientIdAndDateTime( patientId, appDateTime);
+        }
     }
 }

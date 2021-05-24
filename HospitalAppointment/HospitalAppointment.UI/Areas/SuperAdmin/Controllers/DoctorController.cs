@@ -39,6 +39,7 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
         }
         public IActionResult Index()
         {
+            var x = _activeSuperAdmin.GetActiveSuperAdmin();
             TempData["ActiveSuperAdmin"] = _activeSuperAdmin.GetActiveSuperAdmin();
             var doctorListDto = _mapper.Map<List<DoctorListDto>>(_doctorService.GetDoctorsWithAllTables());
             return View(doctorListDto);
@@ -89,15 +90,22 @@ namespace HospitalAppointment.UI.Areas.SuperAdmin.Controllers
         [HttpPost]
         public bool RemoveDoctor(int id)
         {
-            _doctorService.DeleteDoctorWithPoliclinicByDoctorId(id);
-            return true;
+            try
+            {
+                _doctorService.DeleteDoctorWithPoliclinicByDoctorId(id);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
 
         public IActionResult UpdateDoctor(int doctorId)
         {
             TempData["ActiveSuperAdmin"] = _activeSuperAdmin.GetActiveSuperAdmin();
             var doctorUpdateDto = _mapper.Map<DoctorUpdateDto>(_doctorService.GetDoctorWithAllTablesByUserId(doctorId));
-            ViewBag.Departments = new SelectList(_departmentService.GetAll(), "Id", "DepartmanName",doctorUpdateDto.Doctor.DepartmentId);
+            ViewBag.Departments = new SelectList(_departmentService.GetAll(), "Id", "DepartmanName", doctorUpdateDto.Doctor.DepartmentId);
             return View(doctorUpdateDto);
         }
 

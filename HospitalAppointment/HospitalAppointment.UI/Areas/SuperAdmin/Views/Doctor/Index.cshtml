@@ -38,7 +38,7 @@
                                 <td>@doctorUser.Doctor.Department.DepartmanName</td>
                                 <td >@doctorUser.Doctor.Policlinic.PoliclinicName</td>
                                 <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-success" asp-action="UpdateDoctor" asp-route-doctorId="@doctorUser.Id" style="width:85px;">Düzenle</a></td>
-                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-danger" data-modid="@doctorUser.Id" data-modtitle="@doctorUser.Name" data-toggle="modal" href="#myModal" style="width:85px;">Sil</a></td>
+                                <td style="width:70px;"><a class="btn waves-effect waves-light btn-grd-danger openModal" data-modid="@doctorUser.Id" data-modtitle="@doctorUser.Name" data-toggle="modal" href="#myModal" style="width:85px;">Sil</a></td>
                             </tr>
                         }
                     </tbody>
