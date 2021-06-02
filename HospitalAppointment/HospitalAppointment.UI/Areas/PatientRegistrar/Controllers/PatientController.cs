@@ -58,12 +58,13 @@ namespace HospitalAppointment.UI.Areas.PatientRegistrar.Controllers
                 Password = patientAddDto.Password
             };
             int userId = _userService.AddWithRetObject(patientUser).Id;
+            var adminId = _superAdminService.GetAll().FirstOrDefault().Id;
             var patient = new DataAccess.Concrete.EntityFrameworkCore.Entities.Patient()
             {
                 Id = userId,
                 MotherName = patientAddDto.MotherName,
                 FatherName = patientAddDto.FatherName,
-                SuperAdminId = 3008
+                SuperAdminId = adminId
             };
             _patientService.Add(patient);
             return RedirectToAction("Index","Home");

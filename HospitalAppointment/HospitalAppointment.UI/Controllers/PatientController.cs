@@ -14,11 +14,13 @@ namespace HospitalAppointment.UI.Controllers
         private readonly IRolService _rolService;
         private readonly IUserService _userService;
         private readonly IPatientService _patientService;
-        public PatientController(IRolService rolService, IUserService userService, IPatientService patientService)
+        private readonly ISuperAdminService _superAdminService;
+        public PatientController(ISuperAdminService superAdminService,IRolService rolService, IUserService userService, IPatientService patientService)
         {
             _rolService = rolService;
             _userService = userService;
             _patientService = patientService;
+            _superAdminService = superAdminService;
         }
         public IActionResult CreatePatient()
         {
@@ -42,12 +44,13 @@ namespace HospitalAppointment.UI.Controllers
                 Password = patientAddDto.Password
             };
             int userId = _userService.AddWithRetObject(patientUser).Id;
+            var adminId = _superAdminService.GetAll().FirstOrDefault().Id;
             var patient = new DataAccess.Concrete.EntityFrameworkCore.Entities.Patient()
             {
                 Id = userId,
                 MotherName = patientAddDto.MotherName,
                 FatherName = patientAddDto.FatherName,
-                SuperAdminId = 3008
+                SuperAdminId = adminId
             };
             _patientService.Add(patient);
             return RedirectToAction("Index", "Home");
