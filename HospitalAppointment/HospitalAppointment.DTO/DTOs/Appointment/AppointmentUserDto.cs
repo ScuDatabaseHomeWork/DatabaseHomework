@@ -17,7 +17,5 @@ namespace HospitalAppointment.DTO.DTOs.Appointment
         public int DoctorUserId { get; set; }
         public string DoctorUserName { get; set; }
         public DateTime AppointmentDateTime { get; set; }
-
-
     }
 }

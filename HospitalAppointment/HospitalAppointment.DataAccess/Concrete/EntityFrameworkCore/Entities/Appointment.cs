@@ -19,6 +19,7 @@ namespace HospitalAppointment.DataAccess.Concrete.EntityFrameworkCore.Entities
         public int DoctorId { get; set; }
         public int PatientId { get; set; }
         public bool Confirmed { get; set; }
+        public DateTime CreatingDate { get; set; }
 
         [ForeignKey(nameof(DoctorId))]
         [InverseProperty("Appointments")]
